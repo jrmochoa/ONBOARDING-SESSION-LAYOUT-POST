@@ -1,0 +1,41 @@
+=== CSS Stylesheet Links ===
+1. https://sbcjhs1.aralinks.net/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css
+2. https://sbcjhs1.aralinks.net/theme/yui_combo.php?3.18.1/cssbutton/cssbutton-min.css
+3. https://sbcjhs1.aralinks.net/theme/yui_combo.php?3.18.1/datatable-base/assets/skins/sam/datatable-base.css&3.18.1/datatable-message/assets/skins/sam/datatable-message.css&3.18.1/datatable-sort/assets/skins/sam/datatable-sort.css&3.18.1/resize-base/assets/skins/sam/resize-base.css
+4. https://sbcjhs1.aralinks.net/theme/yui_combo.php?2in3/2.9.0/build/yui2-skin-sam-treeview/assets/skins/sam/yui2-skin-sam-treeview-min.css
+5. https://sbcjhs1.aralinks.net/theme/styles.php/academi/1784023523_1/all
+6. https://sbcjhs1.aralinks.net/lib/editor/tiny/loader.php/1784023523/skins/ui/oxide/skin.min.css
+
+=== Inline CSS ===
+
+/* Inline style block 1 */
+
+.primary-navigation li[data-key="home"] {
+    display: none;
+}
+
+
+
+/* Inline style block 2 */
+
+      @keyframes claude-pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      #claude-agent-glow-border-inner {
+        animation: claude-pulse 2s ease-in-out infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #claude-agent-glow-border-inner {
+          animation: none;
+        }
+      }
+    
+
+/* Inline style block 3 */
+
+    #searchresults {
+        background-color: #ffffff;
+    }
+
+

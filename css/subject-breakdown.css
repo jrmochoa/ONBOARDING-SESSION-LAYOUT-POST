@@ -1,0 +1,238 @@
+/* ============ Ops Dashboard theme ============
+   Matches css/class-program.css / css/teacher-schedule.css / css/session-breakdown.css
+   — dark/monospace by default, light opt-in via the toggle (js/theme.js),
+   remembered in localStorage. */
+:root, :root[data-theme="dark"]{
+  --bg:#0A0E17;
+  --panel:#10162a;
+  --panel-alt:#0d1220;
+  --line:#1c2436;
+  --ink:#E6ECFA;
+  --muted:#5f6b85;
+  --cyan:#00E5FF;
+  --live:#39FF14;
+  --warn:#FFB020;
+}
+:root[data-theme="light"]{
+  --bg:#F4F6FB;
+  --panel:#FFFFFF;
+  --panel-alt:#EDF1F8;
+  --line:#D7DEEA;
+  --ink:#0B1220;
+  --muted:#6B7590;
+  --cyan:#0284C7;
+  --live:#16A34A;
+  --warn:#B45309;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'JetBrains Mono',monospace;
+  background:var(--bg);
+  color:var(--ink);
+  min-height:100vh;
+}
+.wrap{
+  max-width:1300px;
+  margin:0 auto;
+  padding:28px 24px 60px;
+}
+.pagehead-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.pagehead h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:24px;
+  font-weight:700;
+  margin:0 0 4px;
+  color:var(--ink);
+}
+.pagehead .sub{
+  margin:0 0 22px;
+  color:var(--muted);
+  font-size:13px;
+  font-family:'Inter',sans-serif;
+  max-width:820px;
+  line-height:1.5;
+}
+.pagehead .sub code{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:1px 6px;
+  color:var(--cyan);
+}
+.theme-toggle{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  font-weight:600;
+  color:var(--ink);
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:8px 14px;
+  cursor:pointer;
+  white-space:nowrap;
+  margin-bottom:4px;
+  transition:border-color .15s ease;
+}
+.theme-toggle:hover{border-color:var(--cyan);}
+
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-bottom:22px;
+}
+.seg{
+  display:inline-flex;
+  flex-wrap:wrap;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:3px;
+  gap:2px;
+}
+.seg button{
+  border:1px solid transparent;
+  background:transparent;
+  padding:7px 15px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:.3px;
+  color:var(--muted);
+  border-radius:4px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.seg button.active{
+  background:rgba(0,229,255,.08);
+  border-color:var(--cyan);
+  color:var(--cyan);
+}
+.seg button:hover:not(.active){color:var(--ink);}
+
+.subjects{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(380px, 1fr));
+  gap:16px;
+}
+.grade-heading{
+  grid-column:1 / -1;
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:16px;
+  font-weight:700;
+  color:var(--ink);
+  margin:18px 0 2px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
+}
+.grade-heading:first-child{margin-top:0;}
+.grade-heading .grade-total{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:600;
+  color:var(--muted);
+}
+
+.subject-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px 16px 16px;
+}
+.subject-card .card-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+.subject-card .card-head h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  margin:0;
+  color:var(--ink);
+}
+.subject-card .card-head .count-badge{
+  font-size:11px;
+  font-weight:700;
+  color:var(--cyan);
+  background:rgba(0,229,255,.08);
+  padding:2px 9px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+.subject-card table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12px;
+}
+.subject-card th{
+  text-align:left;
+  color:var(--muted);
+  font-weight:600;
+  font-size:10px;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  padding:4px 6px;
+  border-bottom:1px solid var(--line);
+}
+.subject-card td{
+  padding:6px;
+  border-bottom:1px solid var(--line);
+  vertical-align:middle;
+}
+.subject-card tr:last-child td{border-bottom:none;}
+.session-num-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  font-weight:700;
+  font-size:11px;
+  color:#fff;
+  background:var(--muted);
+}
+tr.status-done .session-num-badge{background:var(--live);}
+.status-pill{
+  display:inline-block;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.4px;
+  padding:2px 8px;
+  border-radius:999px;
+}
+.status-pill.done{color:var(--live);background:rgba(57,255,20,.1);}
+.status-pill.upcoming{color:var(--cyan);background:rgba(0,229,255,.08);}
+:root[data-theme="light"] .status-pill.done{background:rgba(22,163,74,.1);}
+:root[data-theme="light"] .status-pill.upcoming{background:rgba(2,132,199,.1);}
+.section-cell{
+  font-weight:600;
+  color:var(--ink);
+}
+.grade-cell{
+  font-weight:600;
+  font-size:11px;
+  color:var(--cyan);
+  white-space:nowrap;
+}
+.day-cell{color:var(--muted);font-size:11px;}
+.cancelled-note{
+  margin-top:10px;
+  padding-top:8px;
+  border-top:1px dashed var(--line);
+  font-size:10.5px;
+  color:var(--warn);
+  line-height:1.5;
+}

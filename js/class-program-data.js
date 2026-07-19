@@ -1,0 +1,8868 @@
+/* Generated from CLASS PROGRAM images + g7_g8_courses_full.csv / g9_g10_courses_full.csv. Same content as class-program.json. */
+const CLASS_PROGRAM = {
+  "meta": {
+    "source": "CLASS PROGRAM folder (section weekly class program images)",
+    "note": "All 5 Grade 7, 7 Grade 8, 7 Grade 9, and 7 Grade 10 sections are included.",
+    "commonRoutine": [
+      {
+        "time": "6:50 - 7:00",
+        "label": "Life Session"
+      },
+      {
+        "time": "7:00 - 7:10",
+        "label": "Advisory Period"
+      },
+      {
+        "time": "7:10 - 7:15",
+        "label": "Physical Exercise"
+      }
+    ],
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "grades": [
+      "G7",
+      "G8",
+      "G9",
+      "G10"
+    ]
+  },
+  "sections": {
+    "G7": {
+      "Faith": {
+        "room": "SMVB-103",
+        "adviser": "Ms. Aimee Patriz C. Ramos",
+        "male": 16,
+        "female": 15,
+        "total": 31,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Aimee Ramos"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            }
+          ]
+        }
+      },
+      "Charity": {
+        "room": "SMVB-102",
+        "adviser": "Mrs. Melba P. Comendador",
+        "male": 15,
+        "female": 19,
+        "total": 34,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. M. Comendador"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            }
+          ]
+        }
+      },
+      "Hope": {
+        "room": "SMVB-104",
+        "adviser": "Ms. Angelica B. Ramos",
+        "male": 13,
+        "female": 17,
+        "total": 30,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Angelica Ramos"
+            }
+          ]
+        }
+      },
+      "Joy": {
+        "room": "SMVB-105",
+        "adviser": "Ms. Hazel Mae Aguarin",
+        "male": 13,
+        "female": 18,
+        "total": 31,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            }
+          ]
+        }
+      },
+      "Love": {
+        "room": "SMVB-106",
+        "adviser": "Mr. Benedick Justin C. Acob",
+        "male": 14,
+        "female": 17,
+        "total": 31,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mr. Benedick Justin Acob"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            }
+          ]
+        }
+      }
+    },
+    "G9": {
+      "Honesty": {
+        "room": "SMVB-106",
+        "adviser": "Ms. Bianchie Nicole D. Pablo",
+        "male": 14,
+        "female": 30,
+        "total": 44,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            }
+          ]
+        }
+      },
+      "Modesty": {
+        "room": "SMVB-204",
+        "adviser": "Ms. Marbelyn Barbosa",
+        "male": 27,
+        "female": 8,
+        "total": 35,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            }
+          ]
+        }
+      },
+      "Serenity": {
+        "room": "SMVB-102",
+        "adviser": "Ms. Princess Camille D. Rempillo",
+        "male": 18,
+        "female": 20,
+        "total": 38,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Princess Camille Rempillo"
+            }
+          ]
+        }
+      },
+      "Creativity": {
+        "room": "SMVB-101",
+        "adviser": "Mrs. Catherine C. Aclan",
+        "male": 18,
+        "female": 21,
+        "total": 39,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Catherine Aclan"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Mrs. Melba Comendador"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "TLE (FCS)",
+              "teacher": "Mrs. Melba Comendador"
+            }
+          ]
+        }
+      },
+      "Loyalty": {
+        "room": "SMVB-105",
+        "adviser": "Mr. Leopoldo G. Clavel Jr.",
+        "male": 19,
+        "female": 13,
+        "total": 32,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ]
+        }
+      },
+      "Industry": {
+        "room": "SMVB-103",
+        "adviser": "Mrs. Gracielle E. Manongsong",
+        "male": 14,
+        "female": 29,
+        "total": 43,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            }
+          ]
+        }
+      },
+      "Integrity": {
+        "room": "SMVB-104",
+        "adviser": "Ms. Jiselle Mari S. Palma",
+        "male": 15,
+        "female": 29,
+        "total": 44,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Jiselle Mari Palma"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Leopoldo Clavel"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Gracielle Manongsong"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Bianchie Nicole Pablo"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (FCS/IA/ICT)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez / Mrs. Kimberly Salazar"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Princess Camille Rempillo"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Marbelyn Barbosa"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Catherine Aclan"
+            }
+          ]
+        }
+      }
+    },
+    "G8": {
+      "Counsel": {
+        "room": "SMVB-101",
+        "adviser": "Mrs. Katrina Marie V. Celo",
+        "male": 18,
+        "female": 19,
+        "total": 37,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Mary Rose Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            }
+          ]
+        }
+      },
+      "Fortitude": {
+        "room": "SMVB-203",
+        "adviser": "Ms. Janelle G. Aguila",
+        "male": 18,
+        "female": 18,
+        "total": 36,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Ms. Princess Rose Ann Agtay"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            }
+          ]
+        }
+      },
+      "Knowledge": {
+        "room": "SMVB-204",
+        "adviser": "Mr. Rey Dexter P. Lopez",
+        "male": 15,
+        "female": 21,
+        "total": 36,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Hazel Mae Aguarin"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            }
+          ]
+        }
+      },
+      "Piety": {
+        "room": "SMVB-206",
+        "adviser": "Ms. Sherelyn Dipalac",
+        "male": 16,
+        "female": 21,
+        "total": 37,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Sherelyn Dipalac"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Angelica Ramos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            }
+          ]
+        }
+      },
+      "Strength": {
+        "room": "SMVB-301",
+        "adviser": "Mr. Joshua Dimayacyac",
+        "male": 14,
+        "female": 22,
+        "total": 36,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Aimee Patriz Ramos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            }
+          ]
+        }
+      },
+      "Understanding": {
+        "room": "SMVB-302",
+        "adviser": "Mr. James Darelle L. Ylagan",
+        "male": 17,
+        "female": 18,
+        "total": 35,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Reymond Baes"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mr. Benedick Justin Acob"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Joshua Dimayacyac"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            }
+          ]
+        }
+      },
+      "Wisdom": {
+        "room": "SMVB-303",
+        "adviser": "Ms. Maria Joyce C. Silang",
+        "male": 16,
+        "female": 19,
+        "total": 35,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 8:00",
+              "kind": "class",
+              "subject": "TLE",
+              "teacher": "Mr. Mark David De Chavez"
+            },
+            {
+              "time": "8:00 - 8:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mr. Rey Dexter Lopez"
+            },
+            {
+              "time": "8:45 - 9:15",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:15 - 10:00",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Ms. Sherelyn Dipalac"
+            },
+            {
+              "time": "10:00 - 10:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Ms. Janelle Aguila"
+            },
+            {
+              "time": "10:45 - 11:30",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Mr. Zander Rayos"
+            },
+            {
+              "time": "11:30 - 12:30",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:30 - 1:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Katrina Marie Celo"
+            },
+            {
+              "time": "1:15 - 2:00",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Ms. Maria Joyce Silang"
+            },
+            {
+              "time": "2:00 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Mr. John Mathew Pakingan"
+            },
+            {
+              "time": "2:45 - 3:30",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Mr. James Darelle Ylagan"
+            }
+          ]
+        }
+      }
+    },
+    "G10": {
+      "Compassion": {
+        "room": "SMVB-202",
+        "adviser": "Mrs. Sheryl I. Garcia",
+        "male": 16,
+        "female": 20,
+        "total": 36,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mr. Loreta Mendoza"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mr. Loreta Mendoza"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mr. Loreta Mendoza"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mr. Loreta Mendoza"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mr. Loreta Mendoza"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            }
+          ]
+        }
+      },
+      "Courage": {
+        "room": "SMVB-203",
+        "adviser": "Mrs. Ailyn E. Abando",
+        "male": 19,
+        "female": 20,
+        "total": 39,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "TLE (CooKery)",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            }
+          ]
+        }
+      },
+      "Generosity": {
+        "room": "SMVB-206",
+        "adviser": "Mr. Paul Vincent M. Ilagan",
+        "male": 11,
+        "female": 31,
+        "total": 42,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            }
+          ]
+        }
+      },
+      "Justice": {
+        "room": "SMVB-207",
+        "adviser": "Mrs. Gengky D. Suarez",
+        "male": 13,
+        "female": 28,
+        "total": 41,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            }
+          ]
+        }
+      },
+      "Nationalism": {
+        "room": "SMVB-301",
+        "adviser": "Mrs. Loreta R. Mendoza",
+        "male": 16,
+        "female": 26,
+        "total": 42,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            }
+          ]
+        }
+      },
+      "Service": {
+        "room": "SMVB-303",
+        "adviser": "Ms. Christine C. Balmaceda",
+        "male": 18,
+        "female": 14,
+        "total": 32,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Christine Balmaceda"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            }
+          ]
+        }
+      },
+      "Perseverance": {
+        "room": "SMVB-302",
+        "adviser": "Ms. Jane M. Dinglasan",
+        "male": 17,
+        "female": 14,
+        "total": 31,
+        "schedule": {
+          "Monday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mrs. Paul Vincent Ilagan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mrs. Paul Vincent Ilagan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "COMP",
+              "teacher": "Ms. Crystal Kaye Ambrocio"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mrs. Paul Vincent Ilagan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            }
+          ],
+          "Thursday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "HR/L/G",
+              "teacher": "Ms. Jane Dinglasan"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mrs. Paul Vincent Ilagan"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            }
+          ],
+          "Friday": [
+            {
+              "time": "7:15 - 7:55",
+              "kind": "class",
+              "subject": "MAPEH",
+              "teacher": "Ms. Bea Lorraine Blanco"
+            },
+            {
+              "time": "7:55 - 8:35",
+              "kind": "class",
+              "subject": "ENG",
+              "teacher": "Mrs. Gengky Suarez"
+            },
+            {
+              "time": "8:35 - 9:15",
+              "kind": "class",
+              "subject": "CLVE",
+              "teacher": "Ms. Christine Balmaceda"
+            },
+            {
+              "time": "9:15 - 9:45",
+              "kind": "break",
+              "label": "Break"
+            },
+            {
+              "time": "9:45 - 10:25",
+              "kind": "class",
+              "subject": "SCI",
+              "teacher": "Mr. Paul Vincent Ilagan"
+            },
+            {
+              "time": "10:25 - 11:05",
+              "kind": "class",
+              "subject": "AP",
+              "teacher": "Mrs. Sheryl Garcia"
+            },
+            {
+              "time": "11:05 - 11:45",
+              "kind": "class",
+              "subject": "Fil",
+              "teacher": "Mrs. Loreta Mendoza"
+            },
+            {
+              "time": "11:45 - 12:45",
+              "kind": "break",
+              "label": "Lunch"
+            },
+            {
+              "time": "12:45 - 1:25",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "1:25 - 2:05",
+              "kind": "class",
+              "subject": "TLE (Cookery/Drafting/FBS)",
+              "teacher": "Ms. Jane Dinglasan / Mr. Mark David De Chavez/Mr. Reymond Baes"
+            },
+            {
+              "time": "2:05 - 2:45",
+              "kind": "class",
+              "subject": "MATH",
+              "teacher": "Mrs. Ailyn Abando"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "courses": {
+    "G7": {
+      "Charity": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=162",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=163",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=164",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=165",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=166",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=167",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=375",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=168",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=169",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=170"
+      },
+      "Faith": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=171",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=172",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=173",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=174",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=175",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=176",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=376",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=177",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=178",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=179"
+      },
+      "Hope": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=180",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=181",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=182",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=183",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=184",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=185",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=377",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=186",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=187",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=188"
+      },
+      "Joy": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=189",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=190",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=191",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=192",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=193",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=194",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=378",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=195",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=196",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=197"
+      },
+      "Love": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=198",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=199",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=200",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=201",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=202",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=203",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=379",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=204",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=205",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=206"
+      }
+    },
+    "G8": {
+      "Counsel": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=207",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=208",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=209",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=210",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=211",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=212",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=380",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=213",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=214",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=215"
+      },
+      "Fortitude": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=216",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=217",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=218",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=219",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=220",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=221",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=381",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=222",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=223",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=224"
+      },
+      "Knowledge": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=225",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=226",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=227",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=228",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=229",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=230",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=382",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=231",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=232",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=233"
+      },
+      "Piety": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=234",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=235",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=236",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=237",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=238",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=239",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=383",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=240",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=241",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=242"
+      },
+      "Strength": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=243",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=244",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=245",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=246",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=247",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=248",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=384",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=249",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=250",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=251"
+      },
+      "Understanding": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=252",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=253",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=254",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=255",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=256",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=257",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=385",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=258",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=259",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=260"
+      },
+      "Wisdom": {
+        "Christian Living and Values Education": "https://sbcjhs1.aralinks.net/course/view.php?id=261",
+        "Computer": "https://sbcjhs1.aralinks.net/course/view.php?id=262",
+        "English": "https://sbcjhs1.aralinks.net/course/view.php?id=263",
+        "Filipino": "https://sbcjhs1.aralinks.net/course/view.php?id=264",
+        "MAPEH": "https://sbcjhs1.aralinks.net/course/view.php?id=265",
+        "Mathematics": "https://sbcjhs1.aralinks.net/course/view.php?id=266",
+        "Phil-IRI": "https://sbcjhs1.aralinks.net/course/view.php?id=386",
+        "Science": "https://sbcjhs1.aralinks.net/course/view.php?id=267",
+        "Social Studies": "https://sbcjhs1.aralinks.net/course/view.php?id=268",
+        "TLE": "https://sbcjhs1.aralinks.net/course/view.php?id=269"
+      }
+    },
+    "G9": {
+      "Creativity": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=163",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=164",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=361",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=166",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=167",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=168",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=165",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=169",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=170",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=171"
+      },
+      "Honesty": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=172",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=173",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=362",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=175",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=176",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=177",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=174",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=178",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=179",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=180"
+      },
+      "Industry": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=181",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=182",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=363",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=184",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=185",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=186",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=183",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=187",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=188",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=189"
+      },
+      "Integrity": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=190",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=191",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=364",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=193",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=194",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=195",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=192",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=196",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=197",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=198"
+      },
+      "Loyalty": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=199",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=200",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=365",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=202",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=203",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=204",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=201",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=205",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=206",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=207"
+      },
+      "Modesty": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=208",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=209",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=366",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=211",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=212",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=213",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=210",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=214",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=215",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=216"
+      },
+      "Serenity": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=217",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=218",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=367",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=220",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=221",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=222",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=219",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=223",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=224",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=225"
+      }
+    },
+    "G10": {
+      "Compassion": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=226",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=227",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=368",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=229",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=230",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=231",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=228",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=232",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=233",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=234"
+      },
+      "Courage": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=235",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=236",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=369",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=238",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=239",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=240",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=237",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=241",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=242",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=243"
+      },
+      "Generosity": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=244",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=245",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=370",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=247",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=248",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=249",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=246",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=250",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=251",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=252"
+      },
+      "Justice": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=253",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=254",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=371",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=256",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=257",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=258",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=255",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=259",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=260",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=261"
+      },
+      "Nationalism": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=262",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=263",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=372",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=265",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=266",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=267",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=264",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=268",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=269",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=270"
+      },
+      "Perseverance": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=271",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=272",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=373",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=274",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=275",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=276",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=273",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=277",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=278",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=279"
+      },
+      "Service": {
+        "Christian Living and Values Education": "https://sbcjhs2.aralinks.net/course/view.php?id=280",
+        "Computer": "https://sbcjhs2.aralinks.net/course/view.php?id=281",
+        "English": "https://sbcjhs2.aralinks.net/course/view.php?id=374",
+        "Filipino": "https://sbcjhs2.aralinks.net/course/view.php?id=283",
+        "MAPEH": "https://sbcjhs2.aralinks.net/course/view.php?id=284",
+        "Mathematics": "https://sbcjhs2.aralinks.net/course/view.php?id=285",
+        "Phil-IRI": "https://sbcjhs2.aralinks.net/course/view.php?id=282",
+        "Science": "https://sbcjhs2.aralinks.net/course/view.php?id=286",
+        "Social Studies": "https://sbcjhs2.aralinks.net/course/view.php?id=287",
+        "TLE": "https://sbcjhs2.aralinks.net/course/view.php?id=288"
+      }
+    }
+  }
+};

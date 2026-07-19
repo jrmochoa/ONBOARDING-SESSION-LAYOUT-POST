@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Session Breakdown — 5 Sessions per Section</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/session-breakdown.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('ace-schedule-theme') === 'light' ? 'light' : 'dark');</script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="pagehead">
+    <div class="pagehead-top">
+      <h1>Session Breakdown</h1>
+      <button id="themeToggle" class="theme-toggle"></button>
+    </div>
+    <p class="sub">Every section's 5 onboarding sessions, computed live from <code>js/data.js</code> — edit the schedule there and this page updates on next load, nothing here is hand-typed.</p>
+    <p class="sub note">Session 1 is the same for every section in a grade: a one-time online kickoff on <b>June 29</b> — Grade 7 at 8:00–9:00&nbsp;AM, Grade 9 at 10:00–11:00&nbsp;AM. Sessions 2–5 are each section's own in-person schedule.</p>
+  </div>
+
+  <div class="controls">
+    <div class="seg" id="gradeSeg"></div>
+  </div>
+
+  <div id="sections" class="sections"></div>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/data.js"></script>
+<script src="js/session-breakdown.js"></script>
+</body>
+</html>

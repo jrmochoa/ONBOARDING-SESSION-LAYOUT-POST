@@ -1,0 +1,298 @@
+/* ============ Ops Dashboard theme ============
+   Dark/monospace, built around this page's live "current period" tracking —
+   see js/class-program.js's nowState()/isPeriodNow(). The LIVE badge on
+   .current cells is the functional payoff of the dark styling, not just
+   decoration on top of it. Dark is the default (js/theme.js applies
+   data-theme="dark" on first load); light is opt-in via the toggle button
+   and remembered in localStorage. Neon accents don't have enough contrast
+   on white, so subject/grade chip colors are swapped separately in JS
+   (class-program.js's SUBJECT_COLOR_DARK/LIGHT) based on getTheme() —
+   this file only owns the page chrome's own colors. */
+:root, :root[data-theme="dark"]{
+  --bg:#0A0E17;
+  --panel:#10162a;
+  --panel-alt:#0d1220;
+  --line:#1c2436;
+  --ink:#E6ECFA;
+  --muted:#5f6b85;
+  --cyan:#00E5FF;
+  --live:#39FF14;
+}
+:root[data-theme="light"]{
+  --bg:#F4F6FB;
+  --panel:#FFFFFF;
+  --panel-alt:#EDF1F8;
+  --line:#D7DEEA;
+  --ink:#0B1220;
+  --muted:#6B7590;
+  --cyan:#0284C7;
+  --live:#16A34A;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'JetBrains Mono',monospace;
+  background:var(--bg);
+  color:var(--ink);
+  min-height:100vh;
+}
+.wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:28px 24px 60px;
+}
+.pagehead-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.pagehead h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:24px;
+  font-weight:700;
+  margin:0 0 4px;
+  color:var(--ink);
+}
+.theme-toggle{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  font-weight:600;
+  color:var(--ink);
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:8px 14px;
+  cursor:pointer;
+  white-space:nowrap;
+  margin-bottom:4px;
+  transition:border-color .15s ease;
+}
+.theme-toggle:hover{
+  border-color:var(--cyan);
+}
+.pagehead .sub{
+  margin:0 0 22px;
+  color:var(--muted);
+  font-size:13px;
+  font-family:'Inter',sans-serif;
+}
+.pagehead .sub code{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:1px 6px;
+  color:var(--cyan);
+}
+.now-clock{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:8px 16px;
+  margin-bottom:20px;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.3px;
+  color:var(--ink);
+}
+.now-clock .dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 6px var(--cyan);
+}
+.now-clock.no-school .dot{
+  background:var(--muted);
+  box-shadow:none;
+}
+
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-bottom:20px;
+}
+.seg{
+  display:inline-flex;
+  flex-wrap:wrap;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:3px;
+  gap:2px;
+}
+.seg button{
+  border:1px solid transparent;
+  background:transparent;
+  padding:7px 15px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:.3px;
+  color:var(--muted);
+  border-radius:4px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.seg button.active{
+  background:rgba(0,229,255,.08);
+  border-color:var(--cyan);
+  color:var(--cyan);
+}
+.seg button:hover:not(.active){
+  color:var(--ink);
+}
+
+.section-info{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 28px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:16px 20px;
+  margin-bottom:18px;
+  font-size:13px;
+}
+.section-info .item b{
+  display:block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:15px;
+  color:var(--ink);
+}
+.section-info .item span{
+  color:var(--muted);
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.table-wrap{
+  overflow-x:auto;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px;
+}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:900px;
+  font-size:13px;
+}
+thead th{
+  background:transparent;
+  color:var(--muted);
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  font-size:11px;
+  letter-spacing:1px;
+  padding:8px 6px;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+tbody td{
+  border:1px solid var(--line);
+  padding:8px 6px;
+  vertical-align:middle;
+  text-align:center;
+}
+td.time-col{
+  font-weight:600;
+  font-size:11px;
+  color:var(--muted);
+  background:var(--panel-alt);
+  white-space:nowrap;
+  width:120px;
+}
+tr.break-row td:not(.time-col){
+  background:var(--panel-alt);
+  color:var(--muted);
+  font-style:italic;
+  font-size:11px;
+}
+tr.break-row.current-row td:not(.time-col){
+  background:rgba(57,255,20,.06);
+  color:var(--live);
+}
+td.current, tr.current-row td.time-col{
+  position:relative;
+  background:rgba(57,255,20,.05) !important;
+  box-shadow:inset 0 0 0 1px var(--live);
+}
+td.current::before, tr.current-row td.time-col::before{
+  content:"● LIVE";
+  position:absolute;
+  top:2px;
+  right:4px;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:var(--live);
+  animation:pulseLive 1.4s infinite;
+}
+tr.current-row td.time-col::before{ left:4px; right:auto; }
+@keyframes pulseLive{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
+
+/* The one cell a deep link from index.html or teacher-schedule.html points
+   at (see js/class-program.js's applyDeepLink()/deepLinkCell) — a bold
+   pulsing cyan outline so "you clicked this exact period" reads clearly. */
+td.class-cell.deep-link-cell{
+  position:relative;
+  outline:3px solid var(--cyan);
+  outline-offset:3px;
+  animation:pulseDeepLink 1.6s ease-in-out 3;
+}
+@keyframes pulseDeepLink{
+  0%,100%{outline-color:var(--cyan);}
+  50%{outline-color:transparent;}
+}
+
+td.class-cell .subject{
+  display:inline-block;
+  font-weight:700;
+  font-size:11px;
+  letter-spacing:.3px;
+  padding:2px 8px;
+  border-radius:3px;
+  border:1px solid currentColor;
+}
+td.class-cell .subject a{
+  color:inherit;
+  text-decoration:none;
+}
+td.class-cell .subject a:hover{
+  text-decoration:underline;
+}
+td.class-cell .teacher{
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  color:var(--muted);
+  margin-top:5px;
+}
+td.class-cell .teacher a{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px dotted var(--muted);
+}
+td.class-cell .teacher a:hover{
+  color:var(--ink);
+  border-bottom-color:var(--ink);
+}
+td.class-cell{
+  background:var(--panel);
+}
+
+.missing-note{
+  margin-top:16px;
+  font-size:12px;
+  color:var(--muted);
+  font-style:italic;
+  font-family:'Inter',sans-serif;
+}

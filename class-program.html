@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class Program — Weekly Section Schedules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/class-program.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('ace-schedule-theme') === 'light' ? 'light' : 'dark');</script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="pagehead">
+    <div class="pagehead-top">
+      <h1>Class Program</h1>
+      <button id="themeToggle" class="theme-toggle"></button>
+    </div>
+    <p class="sub">Weekly recurring class schedule per section — read from the <code>CLASS PROGRAM</code> image folder.</p>
+    <div id="nowClock" class="now-clock"></div>
+  </div>
+
+  <div class="controls">
+    <div class="seg" id="gradeSeg"></div>
+    <div class="seg" id="sectionSeg"></div>
+  </div>
+
+  <div id="sectionInfo" class="section-info"></div>
+  <div class="table-wrap">
+    <div id="scheduleTable"></div>
+  </div>
+  <p id="missingNote" class="missing-note"></p>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/class-program-data.js"></script>
+<script src="js/course-links.js"></script>
+<script src="js/class-program.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class Program — Table Style Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=PT+Serif:ital,wght@0,400;1,400&family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{ --page-bg:#EDEFF3; --page-ink:#1a1d29; }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:Inter,sans-serif;background:var(--page-bg);color:var(--page-ink);}
+  .intro{max-width:900px;margin:0 auto;padding:40px 24px 10px;}
+  .intro h1{font-family:'Space Grotesk',sans-serif;font-size:26px;margin:0 0 8px;}
+  .intro p{color:#5b6070;font-size:14px;line-height:1.5;margin:0;}
+  .sample{max-width:1200px;margin:0 auto;padding:36px 24px 60px;}
+  .sample-head{margin-bottom:18px;}
+  .sample-head .label{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;
+    letter-spacing:1px;text-transform:uppercase;color:#5b6070;background:#fff;border:1px solid #d7dae2;
+    border-radius:999px;padding:4px 12px;margin-bottom:10px;
+  }
+  .sample-head h2{font-family:'Space Grotesk',sans-serif;font-size:22px;margin:0 0 6px;}
+  .sample-head p{font-size:13px;color:#5b6070;margin:0;max-width:720px;line-height:1.5;}
+  .divider{max-width:1200px;margin:0 auto;height:1px;background:#d7dae2;}
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Table Style Preview</h1>
+  <p>Five different visual directions for the class-program.html weekly grid, all rendered from the real Grade&nbsp;7&nbsp;&mdash;&nbsp;Faith schedule (pulled live from class-program.json). Scroll through and tell me which one — or which pieces of which ones — to carry into the real page.</p>
+</div>
+
+<!-- ============ 1. BROADSHEET ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">01 · Broadsheet</span>
+    <h2>Print timetable</h2>
+    <p>Monochrome, hairline rules, serif display — reads like a page torn from a school prospectus. No color-coding; hierarchy comes purely from type weight and a single oxblood accent on the day names.</p>
+  </div>
+  <div id="style1"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 2. SOFT CARDS ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">02 · Soft Cards</span>
+    <h2>Friendly grid</h2>
+    <p>No table borders at all — each period is its own rounded card in a CSS grid, pastel-tinted by subject family, with a soft shadow. Warmer and more approachable, closer to a parent-facing app than an admin sheet.</p>
+  </div>
+  <div id="style2"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 3. BOLD BLOCKS ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">03 · Bold Blocks</span>
+    <h2>Vectorized original</h2>
+    <p>A cleaned-up, higher-contrast descendant of the scanned CLASS&nbsp;PROGRAM sheets this data came from — full-bleed saturated subject colors, a dark gutter, gradient day-headers. Loud, dense, and unmistakably a school timetable.</p>
+  </div>
+  <div id="style3"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 4. OPS DASHBOARD ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">04 · Ops Dashboard</span>
+    <h2>Live monitoring console</h2>
+    <p>Dark, monospace, thin cyan grid lines — built around the fact this page already tracks the live "current period." The dashboard framing gives that feature somewhere to live: a pulsing "● LIVE" cell instead of a quiet outline.</p>
+  </div>
+  <div id="style4"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 5. DAY AGENDA ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">05 · Day Agenda</span>
+    <h2>Calendar timeline</h2>
+    <p>Structurally different, not just restyled: five vertical day-columns like a calendar app's week view, with each period block's height proportional to its actual duration. Breaks read as thin gaps instead of full rows — the day's shape becomes visible at a glance.</p>
+  </div>
+  <div id="style5"></div>
+</div>
+
+<script src="js/class-program-data.js"></script>
+<script>
+/* ================= SHARED DATA PREP ================= */
+const DAYS = CLASS_PROGRAM.meta.days; // Monday..Friday
+const FAITH = CLASS_PROGRAM.sections.G7.Faith;
+
+function buildRows(){
+  const rowsByTime = new Map();
+  CLASS_PROGRAM.meta.commonRoutine.forEach(r=>{
+    rowsByTime.set(r.time, { time: r.time, common: r.label });
+  });
+  DAYS.forEach(day=>{
+    FAITH.schedule[day].forEach(p=>{
+      if(!rowsByTime.has(p.time)) rowsByTime.set(p.time, { time: p.time, cells: {} });
+      const row = rowsByTime.get(p.time);
+      if(!row.cells) row.cells = {};
+      row.cells[day] = p;
+    });
+  });
+  return Array.from(rowsByTime.values());
+}
+const ROWS = buildRows();
+
+const SUBJECT_COLOR = {
+  Fil:"#E69F00", MATH:"#D55E00", MAPEH:"#009E73", AP:"#CC79A7", TLE:"#0072B2",
+  CLVE:"#56B4E9", SCI:"#B8A400", ENG:"#6A4C93", COMP:"#2B2D42", "HR/L/G":"#8A8F9C"
+};
+function subjColor(s){ return SUBJECT_COLOR[s] || "#666"; }
+
+/* ================= 1. BROADSHEET ================= */
+(function(){
+  const css = `
+    #style1{background:#fff;border:1px solid #111;font-family:'PT Serif',serif;}
+    #style1 table{border-collapse:collapse;width:100%;}
+    #style1 th{font-family:'Playfair Display',serif;font-weight:700;font-size:16px;
+      padding:14px 8px;border-bottom:3px double #111;color:#7A1F2B;letter-spacing:.5px;text-transform:uppercase;}
+    #style1 th.time-head{color:#111;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+    #style1 td{border:1px solid #ccc;padding:10px 12px;vertical-align:middle;text-align:center;}
+    #style1 td.time{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+      background:#faf9f7;white-space:nowrap;border-right:1px solid #111;}
+    #style1 tr.common td{background:#f2f1ee;font-style:italic;color:#777;font-size:12px;letter-spacing:.5px;}
+    #style1 .subj{display:block;font-weight:700;font-size:15px;color:#111;}
+    #style1 .teach{display:block;font-style:italic;font-size:11.5px;color:#777;margin-top:2px;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+
+  let head = `<th class="time-head">Time</th>` + DAYS.map(d=>`<th>${d}</th>`).join("");
+  let body = ROWS.map(r=>{
+    if(r.common) return `<tr class="common"><td class="time">${r.time}</td><td colspan="${DAYS.length}">${r.common}</td></tr>`;
+    const cells = DAYS.map(d=>{
+      const p = r.cells[d];
+      if(!p) return `<td></td>`;
+      if(p.kind==="break") return `<td style="font-style:italic;color:#888;">${p.label}</td>`;
+      return `<td><span class="subj">${p.subject}</span><span class="teach">${p.teacher}</span></td>`;
+    }).join("");
+    return `<tr><td class="time">${r.time}</td>${cells}</tr>`;
+  }).join("");
+  document.getElementById("style1").innerHTML = `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+})();
+
+/* ================= 2. SOFT CARDS ================= */
+(function(){
+  const css = `
+    #style2{background:#FAF7F2;border-radius:20px;padding:20px;font-family:Inter,sans-serif;}
+    #style2 .grid2{display:grid;grid-template-columns:90px repeat(5,1fr);gap:8px;}
+    #style2 .head{font-family:Quicksand,sans-serif;font-weight:700;font-size:13px;
+      text-align:center;padding:8px 0;color:#4a3f55;}
+    #style2 .time-lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
+      color:#8a7f96;display:flex;align-items:center;justify-content:center;text-align:center;}
+    #style2 .card{border-radius:14px;padding:10px 12px;box-shadow:0 3px 10px rgba(90,70,110,.10);
+      display:flex;flex-direction:column;justify-content:center;min-height:54px;}
+    #style2 .card .subj{font-family:Quicksand,sans-serif;font-weight:700;font-size:13px;color:#2e2438;}
+    #style2 .card .teach{font-size:10.5px;color:#6b6076;margin-top:2px;}
+    #style2 .common{grid-column:2/7;background:#fff;border-radius:999px;text-align:center;
+      font-size:11px;color:#9a90a5;padding:6px;font-weight:600;}
+    #style2 .empty{}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+
+  const head = `<div></div>` + DAYS.map(d=>`<div class="head">${d.slice(0,3)}</div>`).join("");
+  const body = ROWS.map(r=>{
+    if(r.common) return `<div class="time-lbl">${r.time}</div><div class="common">${r.common}</div>`;
+    const cells = DAYS.map(d=>{
+      const p = r.cells[d];
+      if(!p) return `<div class="empty"></div>`;
+      if(p.kind==="break") return `<div class="card" style="background:#fff;align-items:center;"><span class="teach" style="text-align:center;">${p.label}</span></div>`;
+      const c = subjColor(p.subject);
+      return `<div class="card" style="background:${c}22;border-left:4px solid ${c};">
+        <span class="subj">${p.subject}</span><span class="teach">${p.teacher}</span></div>`;
+    }).join("");
+    return `<div class="time-lbl">${r.time}</div>${cells}`;
+  }).join("");
+  document.getElementById("style2").innerHTML = `<div class="grid2">${head}${body}</div>`;
+})();
+
+/* ================= 3. BOLD BLOCKS ================= */
+(function(){
+  const DAY_GRAD = {
+    Monday:["#6F97F6","#4E79EC"], Tuesday:["#3DC8D6","#14A2C2"], Wednesday:["#8B4EF2","#6430E6"],
+    Thursday:["#FB7592","#FC8A57"], Friday:["#2A4EEF","#5A1DF3"]
+  };
+  const css = `
+    #style3{background:#0d1226;border-radius:14px;padding:14px;font-family:'Space Grotesk',sans-serif;}
+    #style3 table{border-collapse:collapse;width:100%;border-radius:10px;overflow:hidden;}
+    #style3 th{padding:10px 6px;color:#fff;font-size:13px;font-weight:700;text-align:center;letter-spacing:.5px;}
+    #style3 th.time-head{background:#1E4FDD;font-family:'IBM Plex Mono',monospace;font-size:11px;}
+    #style3 td{padding:0;text-align:center;vertical-align:middle;}
+    #style3 td.time{font-family:'IBM Plex Mono',monospace;color:#fff;background:#1E4FDD;font-weight:700;
+      font-size:12px;padding:8px 6px;border-bottom:1px solid rgba(255,255,255,.15);}
+    #style3 .cell{padding:8px 6px;min-height:46px;display:flex;flex-direction:column;justify-content:center;
+      border-bottom:1px solid rgba(255,255,255,.12);}
+    #style3 .subj{font-weight:700;font-size:13px;color:#fff;}
+    #style3 .teach{font-family:Inter,sans-serif;font-size:10px;color:rgba(255,255,255,.85);margin-top:1px;}
+    #style3 .common{background:#161c38;color:#8891b3;font-style:italic;font-size:11px;font-family:Inter,sans-serif;
+      padding:6px;border-bottom:1px solid rgba(255,255,255,.08);}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+
+  let head = `<th class="time-head">TIME</th>` + DAYS.map(d=>{
+    const [a,b] = DAY_GRAD[d];
+    return `<th style="background:linear-gradient(135deg,${a},${b});">${d.slice(0,3).toUpperCase()}</th>`;
+  }).join("");
+  let body = ROWS.map(r=>{
+    if(r.common) return `<tr><td class="time" style="background:#161c38;">${r.time}</td><td colspan="${DAYS.length}" class="common">${r.common}</td></tr>`;
+    const cells = DAYS.map(d=>{
+      const p = r.cells[d];
+      if(!p) return `<td style="background:#0d1226;"></td>`;
+      if(p.kind==="break") return `<td class="common">${p.label}</td>`;
+      const c = subjColor(p.subject);
+      return `<td><div class="cell" style="background:${c};"><span class="subj">${p.subject}</span><span class="teach">${p.teacher}</span></div></td>`;
+    }).join("");
+    return `<tr><td class="time">${r.time}</td>${cells}</tr>`;
+  }).join("");
+  document.getElementById("style3").innerHTML = `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+})();
+
+/* ================= 4. OPS DASHBOARD ================= */
+(function(){
+  const NEON = {
+    Fil:"#39FF14", MATH:"#FF3860", MAPEH:"#00E5FF", AP:"#FF6EC7", TLE:"#FFD23F",
+    CLVE:"#7DF9FF", SCI:"#B967FF", ENG:"#FFA53F", COMP:"#5CE1E6", "HR/L/G":"#5f6b85"
+  };
+  const css = `
+    #style4{background:#0A0E17;border:1px solid #1c2436;border-radius:8px;padding:16px;font-family:'JetBrains Mono',monospace;}
+    #style4 .titlebar{display:flex;align-items:center;gap:8px;margin-bottom:12px;color:#5f6b85;font-size:11px;letter-spacing:1px;}
+    #style4 .titlebar .led{width:8px;height:8px;border-radius:50%;background:#00E5FF;box-shadow:0 0 6px #00E5FF;}
+    #style4 table{border-collapse:collapse;width:100%;}
+    #style4 th{color:#7d8bab;font-size:11px;font-weight:600;letter-spacing:1px;padding:8px 6px;
+      border-bottom:1px solid #1c2436;text-align:center;}
+    #style4 td{border:1px solid #131826;padding:8px 6px;text-align:center;vertical-align:middle;}
+    #style4 td.time{color:#5f6b85;font-size:11px;background:#0d1220;white-space:nowrap;}
+    #style4 .subj{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;
+      border:1px solid currentColor;letter-spacing:.5px;}
+    #style4 .teach{display:block;color:#5f6b85;font-size:9.5px;margin-top:4px;}
+    #style4 .common{color:#3d475f;font-size:10px;background:#0d1220;font-style:italic;}
+    #style4 .live{position:relative;background:#0d1a12 !important;}
+    #style4 .live::after{content:"● LIVE";position:absolute;top:2px;right:4px;font-size:8px;color:#39FF14;
+      animation:pulse4 1.4s infinite;}
+    @keyframes pulse4{0%,100%{opacity:1;}50%{opacity:.3;}}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+
+  // Simulate "now" as the first class period on the first day, purely to
+  // demonstrate the live-cell treatment in this static preview.
+  const liveRow = ROWS.find(r=>!r.common);
+  const liveDay = DAYS[0];
+
+  let head = `<th>TIME</th>` + DAYS.map(d=>`<th>${d.slice(0,3).toUpperCase()}</th>`).join("");
+  let body = ROWS.map(r=>{
+    if(r.common) return `<tr><td class="time">${r.time}</td><td colspan="${DAYS.length}" class="common">${r.common}</td></tr>`;
+    const cells = DAYS.map(d=>{
+      const p = r.cells[d];
+      const isLive = (r===liveRow && d===liveDay);
+      if(!p) return `<td></td>`;
+      if(p.kind==="break") return `<td class="common">${p.label}</td>`;
+      const c = NEON[p.subject] || "#7d8bab";
+      return `<td class="${isLive ? "live" : ""}"><span class="subj" style="color:${c};">${p.subject}</span><span class="teach">${p.teacher}</span></td>`;
+    }).join("");
+    return `<tr><td class="time">${r.time}</td>${cells}</tr>`;
+  }).join("");
+  document.getElementById("style4").innerHTML = `
+    <div class="titlebar"><span class="led"></span>GRADE 7 — FAITH · LIVE FEED</div>
+    <table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+})();
+
+/* ================= 5. DAY AGENDA ================= */
+(function(){
+  const css = `
+    #style5{background:#fff;border-radius:16px;padding:20px;font-family:Inter,sans-serif;}
+    #style5 .agenda{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+    #style5 .day-col{display:flex;flex-direction:column;}
+    #style5 .day-title{font-family:Fraunces,serif;font-weight:600;font-size:16px;text-align:center;
+      padding-bottom:8px;margin-bottom:8px;border-bottom:2px solid #eee;color:#2b2438;}
+    #style5 .block{border-radius:8px;padding:6px 8px;margin-bottom:3px;display:flex;flex-direction:column;
+      justify-content:center;color:#fff;}
+    #style5 .block .t{font-family:'IBM Plex Mono',monospace;font-size:9px;opacity:.85;}
+    #style5 .block .s{font-family:Fraunces,serif;font-weight:600;font-size:13px;}
+    #style5 .block .te{font-size:9.5px;opacity:.9;}
+    #style5 .gap{background:repeating-linear-gradient(135deg,#f3f3f3,#f3f3f3 4px,#eaeaea 4px,#eaeaea 8px);
+      border-radius:6px;margin-bottom:3px;display:flex;align-items:center;justify-content:center;
+      color:#999;font-size:9px;font-style:italic;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+
+  function toMin(t){ let [h,m]=t.trim().split(":").map(Number); if(h<6)h+=12; return h*60+m; }
+  const SPAN_START = toMin("6:50"); // school day span: 6:50am-3:30pm
+  const PX_PER_MIN = 3.1;
+
+  function blockStyle(startLabel,endLabel){
+    const s = toMin(startLabel), e = toMin(endLabel);
+    const top = (s - SPAN_START) * PX_PER_MIN;
+    const h = Math.max((e - s) * PX_PER_MIN - 3, 14);
+    return `height:${h}px;`;
+  }
+
+  const cols = DAYS.map(day=>{
+    const items = [];
+    CLASS_PROGRAM.meta.commonRoutine.forEach(r=>{
+      const [s,e] = r.time.split(" - ");
+      items.push({time:r.time, s, e, kind:"routine", label:r.label});
+    });
+    FAITH.schedule[day].forEach(p=>{
+      const [s,e] = p.time.split(" - ");
+      items.push({time:p.time, s, e, kind:p.kind, subject:p.subject, teacher:p.teacher, label:p.label});
+    });
+    items.sort((a,b)=> toMin(a.s) - toMin(b.s));
+
+    const blocks = items.map(it=>{
+      const style = blockStyle(it.s, it.e);
+      if(it.kind==="routine") return `<div class="gap" style="${style}">${it.label}</div>`;
+      if(it.kind==="break") return `<div class="gap" style="${style}">${it.label}</div>`;
+      const c = subjColor(it.subject);
+      return `<div class="block" style="${style}background:${c};">
+        <span class="t">${it.time}</span><span class="s">${it.subject}</span><span class="te">${it.teacher}</span>
+      </div>`;
+    }).join("");
+
+    return `<div class="day-col"><div class="day-title">${day}</div>${blocks}</div>`;
+  }).join("");
+
+  document.getElementById("style5").innerHTML = `<div class="agenda">${cols}</div>`;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Teacher Schedule — Weekly Class Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/teacher-schedule.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('ace-schedule-theme') === 'light' ? 'light' : 'dark');</script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="pagehead">
+    <div class="pagehead-top">
+      <h1>Teacher Schedule</h1>
+      <button id="themeToggle" class="theme-toggle"></button>
+    </div>
+    <p class="sub">Weekly class record per teacher — derived from the same class program data as <a href="class-program.html">class-program.html</a>.</p>
+    <div id="nowClock" class="now-clock"></div>
+  </div>
+
+  <div class="controls">
+    <label for="teacherSelect">Teacher</label>
+    <select id="teacherSelect"></select>
+  </div>
+
+  <div id="teacherInfo" class="section-info"></div>
+  <div class="table-wrap">
+    <div id="tableTitlebar" class="titlebar"></div>
+    <div id="scheduleTable"></div>
+  </div>
+  <p class="missing-note">"Number of Hours" = total weekly minutes spent teaching the primary subject only (off-subject periods like HR/L/G are excluded).</p>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/class-program-data.js"></script>
+<script src="js/course-links.js"></script>
+<script src="js/teacher-schedule.js"></script>
+</body>
+</html>

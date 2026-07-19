@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subject Breakdown — Sessions per Subject per Grade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/subject-breakdown.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('ace-schedule-theme') === 'light' ? 'light' : 'dark');</script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="pagehead">
+    <div class="pagehead-top">
+      <h1>Subject Breakdown</h1>
+      <button id="themeToggle" class="theme-toggle"></button>
+    </div>
+    <p class="sub">How many onboarding sessions are scheduled per subject, per grade level, and exactly which sections they belong to — computed live from <code>js/data.js</code>.</p>
+  </div>
+
+  <div class="controls">
+    <div class="seg" id="gradeSeg"></div>
+  </div>
+
+  <div id="subjects" class="subjects"></div>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/data.js"></script>
+<script src="js/subject-breakdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+:root{
+  --ink:#013491;
+  --royal:#1237B3;
+  --paper:#EEF1F5;
+  --card:#FFFFFF;
+  --line:#DCE2EE;
+  --muted:#6B7AA1;
+  --g7:#1237B3;
+  --g7-soft:#E4E9FB;
+  --g9:#16A34A;
+  --g9-soft:#E8F6ED;
+  --gold:#EDD132;
+  --cancel:#DC2626;
+  --cancel-soft:#F1F2F5;
+
+  --cyan-light:#9EEBFF;   /* "SY 2026–2027" / date subtitle text */
+
+  /* ---- Day-column header gradients (each a 135deg pair) ---- */
+  --col-time-1:#4A7DF2; --col-time-2:#1E4FDD;
+  --col-tue-1:#6F97F6;  --col-tue-2:#4E79EC;
+  --col-wed-1:#3DC8D6;  --col-wed-2:#14A2C2;
+  --col-thu-1:#8B4EF2;  --col-thu-2:#6430E6;
+  --col-fri-1:#FB7592;  --col-fri-2:#FC8A57;
+
+  /* ---- Week-pill gradient ---- */
+  --week-pill-1:#2A4EEF; --week-pill-2:#5A1DF3;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  min-height:100vh;
+}
+
+/* ---------- Toolbar ---------- */
+.toolbar{
+  max-width:1100px;
+  margin:0 auto;
+  padding:28px 24px 10px;
+}
+.toolbar h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:22px;
+  font-weight:700;
+  margin:0 0 4px;
+  letter-spacing:.2px;
+}
+.toolbar p.sub{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:13px;
+}
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-bottom:22px;
+}
+.seg{
+  display:inline-flex;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:3px;
+  gap:2px;
+}
+.seg button{
+  border:none;
+  background:transparent;
+  padding:8px 16px;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:13px;
+  color:var(--muted);
+  border-radius:7px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.seg button.active{
+  background:var(--ink);
+  color:#fff;
+}
+.seg button:hover:not(.active){
+  color:var(--ink);
+}
+.spacer{flex:1;}
+.btn-download{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:13px;
+  background:var(--ink);
+  color:#fff;
+  border:none;
+  padding:11px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  letter-spacing:.2px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:transform .1s ease, box-shadow .15s ease;
+}
+.btn-download:hover{
+  box-shadow:0 6px 16px rgba(23,35,58,.25);
+  transform:translateY(-1px);
+}
+.btn-download:active{transform:translateY(0);}
+.btn-download:disabled{
+  opacity:.6;
+  cursor:wait;
+  transform:none;
+  box-shadow:none;
+}
+.btn-download svg{width:14px;height:14px;}
+.btn-secondary{
+  background:#fff;
+  color:var(--ink);
+  border:1.5px solid var(--line);
+}
+.btn-secondary:hover{
+  box-shadow:0 6px 16px rgba(23,35,58,.10);
+  border-color:var(--ink);
+}
+
+/* ---------- Preview stage ---------- */
+.stage-wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 24px 60px;
+  display:flex;
+  justify-content:center;
+}
+.stage{
+  width:560px;
+  height:560px;
+  position:relative;
+  box-shadow:0 20px 50px rgba(23,35,58,.18);
+  border-radius:4px;
+  overflow:hidden;
+  background:var(--ink);
+}
+.scaler{
+  width:1080px;
+  height:1080px;
+  transform:scale(0.518518519);
+  transform-origin:top left;
+}
+
+/* ==================================================== */
+/* CAPTURE SQUARE — this exact 1080x1080 block gets exported */
+/* ==================================================== */
+.capture{
+  width:1080px;
+  height:1080px;
+  background-image:url('../image/bg.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  flex-direction:column;
+  font-family:'Inter',sans-serif;
+  position:relative;
+}
+.head{
+  position:relative;
+  color:#fff;
+  padding:44px 56px 0;
+  flex-shrink:0;
+}
+
+/* ---- Eyebrow row + WEEK pill ---- */
+.head-top{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+}
+.eyebrow-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.eyebrow-logo{height:28px;width:auto;flex-shrink:0;display:block;}
+.eyebrow-brand{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:var(--gold);
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.eyebrow-divider{color:rgba(255,255,255,.4);font-weight:300;}
+.eyebrow-sub{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:2px;
+  color:#fff;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.week-pill{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  padding:9px 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--week-pill-1), var(--week-pill-2));
+  color:#fff;
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:1px;
+  white-space:nowrap;
+  box-shadow:0 6px 16px rgba(10,15,80,.35);
+}
+
+/* ---- Top-right column: WEEK pill stacked above the SY/date + grade label ---- */
+.head-top-right{
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
+}
+.head-sub{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.3px;
+  text-align:right;
+  white-space:nowrap;
+  background:rgba(4,10,46,.55);
+  padding:5px 14px;
+  border-radius:999px;
+}
+.head-sub .sy{color:var(--cyan-light);font-weight:700;}
+.head-sub .sep{color:rgba(255,255,255,.5);margin:0 8px;}
+.head-sub .gr{color:#fff;font-weight:500;}
+
+/* ---- Headline ---- */
+.headline{
+  position:relative;
+  z-index:2;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:84px;
+  line-height:1;
+  letter-spacing:-1.5px;
+  margin:0;
+  max-width:700px;
+}
+.headline .accent{color:var(--gold);}
+
+/* ---- Floating white card (holds the grid or the day list) ---- */
+.card{
+  flex:1;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  margin:24px 56px 32px;
+  background:var(--card);
+  border-radius:24px;
+  box-shadow:0 24px 60px rgba(2,8,40,.45);
+  overflow:hidden;
+  position:relative;
+  z-index:2;
+}
+
+/* ---- WEEK GRID VIEW ---- */
+.gridwrap{
+  flex:1;
+  display:grid;
+  grid-template-columns:130px repeat(4,1fr);
+  min-height:0;
+}
+.gutter-head, .day-head{
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:#fff;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:16px;
+  letter-spacing:.5px;
+}
+.gutter-head{
+  background:linear-gradient(135deg, var(--col-time-1), var(--col-time-2));
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:2px;
+  border-top-left-radius:24px;
+}
+.gutter-head svg{width:14px;height:14px;flex-shrink:0;}
+.day-head.tuesday{background:linear-gradient(135deg, var(--col-tue-1), var(--col-tue-2));}
+.day-head.wednesday{background:linear-gradient(135deg, var(--col-wed-1), var(--col-wed-2));}
+.day-head.thursday{background:linear-gradient(135deg, var(--col-thu-1), var(--col-thu-2));}
+.day-head.friday{background:linear-gradient(135deg, var(--col-fri-1), var(--col-fri-2));}
+/* Applied by render.js to whichever day column is actually last that week —
+   a day with no sessions is dropped from the grid entirely (see
+   renderWeek()'s activeDays), so Friday isn't guaranteed to be the last
+   column anymore. */
+.day-head.corner{
+  border-top-right-radius:24px;
+}
+.gutter-cell{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg, var(--col-time-1), var(--col-time-2));
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:700;
+  font-size:13.5px;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  padding:2px 6px;
+  line-height:1.25;
+}
+.day-cell{
+  border-bottom:1px solid var(--line);
+  border-left:1px solid var(--line);
+  padding:4px;
+  display:flex;
+  align-items:stretch;
+  justify-content:center;
+  min-height:0;
+}
+/* First (leftmost) day column each row sits right next to the dark gutter —
+   no seam needed. Applied explicitly by render.js per-row rather than via
+   an nth-child formula, since the number of day columns varies week to
+   week (see renderWeek()'s activeDays). */
+.day-cell.first-day{
+  border-left:none;
+}
+.tag{
+  position:relative;
+  width:100%;
+  border-radius:9px;
+  padding:6px 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:2px;
+  border-left:5px solid;
+  min-width:0;
+  text-decoration:none;
+  cursor:pointer;
+}
+.done-badge{
+  position:absolute;
+  top:4px;
+  right:4px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:var(--ink);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 1px 3px rgba(2,8,40,.35);
+}
+.done-badge svg{width:9px;height:9px;}
+.tag.g7{background:var(--g7-soft);border-color:var(--g7);}
+.tag.g9{background:var(--g9-soft);border-color:var(--g9);}
+.tag .line1{
+  min-width:0;
+  line-height:1.25;
+  display:flex;
+  align-items:center;
+}
+.tag .badge-circle{
+  width:19px;
+  height:19px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:700;
+  font-size:11px;
+  color:#fff;
+  margin-right:7px;
+  flex-shrink:0;
+  text-decoration:none;
+}
+.tag.g7 .badge-circle{background:var(--g7);}
+.tag.g9 .badge-circle{background:var(--g9);}
+.tag .act{
+  text-decoration:none;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:13px;
+  color:var(--ink);
+}
+.tag .num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--muted);
+}
+.tag.cancelled{background:var(--cancel-soft);border-color:var(--muted);}
+.tag.cancelled .badge-circle{background:var(--muted);}
+.tag.cancelled .act{color:var(--muted);text-decoration:line-through;}
+.tag.cancelled .num{color:var(--cancel);font-weight:700;}
+
+/* ---- DAY CARD VIEW ---- */
+.daybody{
+  flex:1;
+  min-height:0;
+  padding:32px 40px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  overflow:hidden;
+}
+.session-row{
+  display:flex;
+  align-items:stretch;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  flex:1;
+}
+.session-time{
+  width:190px;
+  flex-shrink:0;
+  background:var(--ink);
+  color:#fff;
+  font-weight:700;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:19px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:10px;
+  line-height:1.3;
+}
+.session-main{
+  position:relative;
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:0 34px;
+  border-left:8px solid;
+  text-decoration:none;
+  cursor:pointer;
+}
+.session-main .done-badge{
+  top:14px;
+  right:14px;
+  width:26px;
+  height:26px;
+}
+.session-main .done-badge svg{width:16px;height:16px;}
+.session-row.g7 .session-main{border-color:var(--g7);background:var(--g7-soft);}
+.session-row.g9 .session-main{border-color:var(--g9);background:var(--g9-soft);}
+.session-badge{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:700;
+  font-size:20px;
+  color:#fff;
+  flex-shrink:0;
+  text-decoration:none;
+}
+.session-row.g7 .session-badge{background:var(--g7);}
+.session-row.g9 .session-badge{background:var(--g9);}
+.session-act{
+  text-decoration:none;
+  display:block;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:30px;
+  color:var(--ink);
+  flex:1;
+}
+.session-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:16px;
+  color:var(--muted);
+}
+.session-row.cancelled .session-main{border-color:var(--muted);background:var(--cancel-soft);}
+.session-row.cancelled .session-badge{background:var(--muted);}
+.session-row.cancelled .session-act{color:var(--muted);text-decoration:line-through;}
+.session-row.cancelled .session-num{color:var(--cancel);font-weight:700;}
+
+/* ---- Footer (sits on the gradient, below the floating card) ---- */
+.foot{
+  flex-shrink:0;
+  position:relative;
+  z-index:2;
+  padding:26px 56px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.legend-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:20px;
+  background:#fff;
+  border-radius:999px;
+  padding:12px 24px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  font-weight:600;
+  color:var(--ink);
+  box-shadow:0 10px 26px rgba(2,8,40,.25);
+}
+.legend-pill span{display:inline-flex;align-items:center;gap:8px;}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
+.dot.g7{background:var(--g7);}
+.dot.g9{background:var(--g9);}
+.date-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--ink);
+  border-radius:999px;
+  padding:12px 22px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:var(--gold);
+  box-shadow:0 10px 26px rgba(2,8,40,.35);
+}
+.date-pill svg{width:15px;height:15px;flex-shrink:0;}
+.empty-state{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:16px;
+  color:var(--muted);
+  border:1px dashed var(--line);
+  border-radius:16px;
+  padding:40px;
+}
