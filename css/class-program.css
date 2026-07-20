@@ -47,6 +47,13 @@ body{
   justify-content:space-between;
   gap:16px;
 }
+/* Embedded in a Moodle iframe (see js/theme.js's inIframe() and the
+   pre-paint <head> script that sets this attribute): the page's own
+   title + theme toggle are redundant next to the LMS's own heading and
+   chrome, so hide them — the subtitle/clock below still shows. */
+:root[data-embedded="true"] .pagehead-top{
+  display:none;
+}
 .pagehead h1{
   font-family:'Space Grotesk',sans-serif;
   font-size:24px;
