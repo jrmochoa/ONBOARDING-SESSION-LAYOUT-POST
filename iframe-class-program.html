@@ -36,7 +36,6 @@
   <!-- COPY FROM HERE (both grades) -->
   <iframe
     id="ace-class-program-frame"
-    src="https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html"
     title="ACE Class Program Schedule"
     loading="lazy"
     style="width:100%; height:600px; border:1px solid #d0d0d0; border-radius:8px; display:block;"
@@ -44,6 +43,10 @@
   <script>
   (function(){
     var frame = document.getElementById('ace-class-program-frame');
+    // Cache-busting query param: guarantees a fresh load every time this
+    // page opens, so neither the browser nor GitHub Pages' CDN can ever
+    // serve a stale copy while debugging (or after any future update).
+    frame.src = 'https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?_cb=' + Date.now();
     window.addEventListener('message', function(e){
       if(e.origin !== 'https://jrmochoa.github.io') return;
       if(!e.data || e.data.source !== 'ace-schedule-iframe') return;
@@ -60,7 +63,6 @@
   </div>
   <pre style="background:#fff;border:1px solid #ccc;border-radius:6px;padding:12px;overflow-x:auto;font-size:12px;">&lt;iframe
   id="ace-class-program-frame"
-  src="https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?grade=G7"
   title="ACE Class Program Schedule — Grade 7"
   loading="lazy"
   style="width:100%; height:600px; border:1px solid #d0d0d0; border-radius:8px; display:block;"
@@ -68,6 +70,7 @@
 &lt;script&gt;
 (function(){
   var frame = document.getElementById('ace-class-program-frame');
+  frame.src = 'https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?grade=G7&_cb=' + Date.now();
   window.addEventListener('message', function(e){
     if(e.origin !== 'https://jrmochoa.github.io') return;
     if(!e.data || e.data.source !== 'ace-schedule-iframe') return;
@@ -82,7 +85,6 @@
   </div>
   <pre style="background:#fff;border:1px solid #ccc;border-radius:6px;padding:12px;overflow-x:auto;font-size:12px;">&lt;iframe
   id="ace-class-program-frame"
-  src="https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?grade=G9"
   title="ACE Class Program Schedule — Grade 9"
   loading="lazy"
   style="width:100%; height:600px; border:1px solid #d0d0d0; border-radius:8px; display:block;"
@@ -90,6 +92,7 @@
 &lt;script&gt;
 (function(){
   var frame = document.getElementById('ace-class-program-frame');
+  frame.src = 'https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?grade=G9&_cb=' + Date.now();
   window.addEventListener('message', function(e){
     if(e.origin !== 'https://jrmochoa.github.io') return;
     if(!e.data || e.data.source !== 'ace-schedule-iframe') return;
