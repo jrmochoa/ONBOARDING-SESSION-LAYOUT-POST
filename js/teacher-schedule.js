@@ -137,7 +137,6 @@ function isPeriodNow(day, range, now){
 const teacherSelect = document.getElementById("teacherSelect");
 const teacherInfo = document.getElementById("teacherInfo");
 const scheduleTable = document.getElementById("scheduleTable");
-const tableTitlebar = document.getElementById("tableTitlebar");
 const nowClock = document.getElementById("nowClock");
 
 function updateClock(){
@@ -174,7 +173,6 @@ function renderTeacher(teacher){
   const minutes = weeklyOnSubjectMinutes(teacher, primaryKey);
 
   renderTeacherInfo(teacher, primarySubject, grades, minutes);
-  tableTitlebar.innerHTML = `<span class="led"></span>${teacher.toUpperCase()} · LIVE FEED`;
 
   const days = CLASS_PROGRAM.meta.days;
   const times = Array.from(new Set(rows.map(r=>r.time))).sort((a,b)=>timeKey(a)-timeKey(b));

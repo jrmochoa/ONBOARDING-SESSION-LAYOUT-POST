@@ -169,22 +169,6 @@ body{
   border-radius:8px;
   padding:14px;
 }
-.titlebar{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  color:var(--muted);
-  font-size:11px;
-  letter-spacing:1px;
-  margin-bottom:12px;
-}
-.titlebar .led{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:var(--cyan);
-  box-shadow:0 0 6px var(--cyan);
-}
 table{
   border-collapse:collapse;
   width:100%;
