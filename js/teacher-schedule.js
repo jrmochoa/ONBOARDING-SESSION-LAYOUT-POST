@@ -19,7 +19,7 @@ function periodMinutes(range){
 // Distinct color per grade, used both for a booked cell's chip and the
 // grade numbers in the SUBJECT header (e.g. "COMPUTER 7 & 8") — mirrors the
 // blue/gold grade coloring seen in teacher-sample-record2.jpg. Avoids green
-// (reserved for the "● LIVE" badge) and cyan (reserved for UI chrome) in
+// (reserved for the "● NOW" badge) and cyan (reserved for UI chrome) in
 // both variants. Dark uses full neon brightness; light needs its own
 // darker set for contrast on white (mirrors class-program.js's
 // SUBJECT_COLOR_DARK/LIGHT split).

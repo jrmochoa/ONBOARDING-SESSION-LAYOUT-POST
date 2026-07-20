@@ -1,6 +1,6 @@
 /* ============ Ops Dashboard theme ============
    Dark/monospace, built around this page's live "current period" tracking —
-   see js/class-program.js's nowState()/isPeriodNow(). The LIVE badge on
+   see js/class-program.js's nowState()/isPeriodNow(). The NOW badge on
    .current cells is the functional payoff of the dark styling, not just
    decoration on top of it. Dark is the default (js/theme.js applies
    data-theme="dark" on first load); light is opt-in via the toggle button
@@ -235,7 +235,7 @@ td.current, tr.current-row td.time-col{
   box-shadow:inset 0 0 0 1px var(--live);
 }
 td.current::before, tr.current-row td.time-col::before{
-  content:"● LIVE";
+  content:"● NOW";
   position:absolute;
   top:2px;
   right:4px;
