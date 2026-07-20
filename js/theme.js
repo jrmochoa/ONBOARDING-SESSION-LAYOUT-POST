@@ -36,6 +36,23 @@ function setTheme(theme){
   localStorage.setItem(THEME_KEY, theme);
 }
 
+// Cross-origin iframes (this site is on GitHub Pages, embedded into a
+// Moodle domain — see iframe-class-program.html) can't be auto-sized from
+// the parent side: reading contentWindow.document.body.scrollHeight across
+// origins is blocked by the same-origin policy. The fix is a postMessage
+// handshake — this page reports its real content height on every change,
+// and the parent-side listener script (in iframe-class-program.html)
+// resizes the <iframe> to match, eliminating the double-scrollbar look of
+// a fixed-height iframe. No-ops outside an iframe. Call this after any
+// render that could change page height (initial render, theme toggle,
+// periodic re-render, window resize) — it's cheap, safe to call often.
+function reportIframeHeight(){
+  if(!inIframe()) return;
+  const height = document.documentElement.scrollHeight;
+  window.parent.postMessage({ source: "ace-schedule-iframe", height: height }, "*");
+}
+window.addEventListener("resize", reportIframeHeight);
+
 // Wires up a toggle button: shows what you'd switch TO, applies the stored
 // theme immediately (in case the inline <head> script somehow didn't run),
 // and calls onChange after every switch so the page can re-render anything

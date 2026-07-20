@@ -226,6 +226,10 @@ function renderTeacher(teacher){
       </tbody>
     </table>
   `;
+
+  // See reportIframeHeight() in theme.js — keeps a Moodle-embedded iframe
+  // sized to actual content instead of showing an internal scrollbar.
+  setTimeout(reportIframeHeight, 0);
 }
 
 /* ================= INITIAL CALLS ================= */

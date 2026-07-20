@@ -256,6 +256,12 @@ function renderSection(){
       hasScrolledToDeepLink = true;
     }
   }
+
+  // Re-report height after every render (initial load, 30s periodic
+  // refresh, grade/section switch, theme toggle) — see reportIframeHeight()
+  // in theme.js. A tick's worth of delay lets the browser finish layout
+  // before we measure it.
+  setTimeout(reportIframeHeight, 0);
 }
 
 // Deep-linked from index.html's onboarding schedule (a session's grade
