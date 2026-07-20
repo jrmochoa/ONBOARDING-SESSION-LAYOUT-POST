@@ -53,6 +53,24 @@ function reportIframeHeight(){
 }
 window.addEventListener("resize", reportIframeHeight);
 
+// A one-shot report right after each render isn't enough on its own: Google
+// Fonts (Space Grotesk/JetBrains Mono/Inter) load asynchronously and swap
+// in after the initial paint, growing the page's real height (different
+// line-height/metrics than the fallback font) *after* that report already
+// fired — the parent never finds out, so the iframe stays sized to the
+// pre-swap height and shows an internal scrollbar. ResizeObserver catches
+// this (and any other reflow — images, anything) without having to predict
+// every cause by hand; document.fonts.ready is kept alongside it as a
+// belt-and-suspenders fallback for engines without ResizeObserver.
+if(inIframe()){
+  if(typeof ResizeObserver !== "undefined"){
+    new ResizeObserver(reportIframeHeight).observe(document.documentElement);
+  }
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(reportIframeHeight);
+  }
+}
+
 // Wires up a toggle button: shows what you'd switch TO, applies the stored
 // theme immediately (in case the inline <head> script somehow didn't run),
 // and calls onChange after every switch so the page can re-render anything
