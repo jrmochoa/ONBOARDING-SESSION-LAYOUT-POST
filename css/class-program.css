@@ -288,11 +288,3 @@ td.class-cell .teacher a:hover{
 td.class-cell{
   background:var(--panel);
 }
-
-.missing-note{
-  margin-top:16px;
-  font-size:12px;
-  color:var(--muted);
-  font-style:italic;
-  font-family:'Inter',sans-serif;
-}

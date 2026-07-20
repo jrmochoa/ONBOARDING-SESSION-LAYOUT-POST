@@ -16,7 +16,6 @@ const gradeSeg = document.getElementById("gradeSeg");
 const sectionSeg = document.getElementById("sectionSeg");
 const sectionInfo = document.getElementById("sectionInfo");
 const scheduleTable = document.getElementById("scheduleTable");
-const missingNote = document.getElementById("missingNote");
 const nowClock = document.getElementById("nowClock");
 
 // One accent per subject, for the Ops Dashboard theme's bordered subject
@@ -246,8 +245,6 @@ function renderSection(){
       <tbody>${bodyRows}</tbody>
     </table>
   `;
-
-  missingNote.textContent = CLASS_PROGRAM.meta.note;
 
   // Scroll the deep-linked cell into view once, right after the first
   // render — not on every 30s re-render, or the page would keep jumping

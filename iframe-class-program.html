@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class Program — Moodle iframe embed (paste-ready)</title>
+<style>
+  body{ margin:0; padding:40px 20px; background:#eef0f3; font-family:Arial,Helvetica,sans-serif; }
+  .preview-note, .snippet-note{ max-width:900px; margin:0 auto 20px; background:#fff3bf; border:1px solid #f0ad4e; border-radius:6px; padding:14px 18px; font-size:13px; line-height:1.6; color:#5c4600; }
+  .preview-note code, .snippet-note code{ background:#00000010; padding:1px 6px; border-radius:4px; }
+  .preview-shell{ max-width:900px; margin:0 auto; }
+  h2{ font-size:15px; margin:28px 0 8px; color:#333; }
+  .snippet-note{ background:#eef; border-color:#99f; color:#224; }
+</style>
+</head>
+<body>
+
+<div class="preview-note">
+  <b>This is a preview page, not the LMS.</b> Below are three ready-to-paste
+  snippets &mdash; pick the one that matches the Moodle site you're editing.
+  Each is a single <code>&lt;iframe&gt;</code> element, nothing else: no
+  <code>&lt;style&gt;</code> or <code>&lt;script&gt;</code> tag to get
+  stripped, since all the real styling lives inside <code>class-program.html</code>
+  itself (loaded in the iframe's own document, untouched by Moodle's editor).
+  Paste it into the Moodle <b>HTML block</b> via <b>Edit HTML source</b> (the
+  "&lt;&gt;" button) &mdash; the rich-text box works too this time since
+  there's no <code>&lt;style&gt;</code>/<code>&lt;script&gt;</code> to lose,
+  but source mode is still the safer bet.
+</div>
+
+<div class="preview-shell">
+
+  <h2>Live preview (both grades, all sections)</h2>
+  <!-- COPY FROM HERE (both grades) -->
+  <iframe
+    src="https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html"
+    title="ACE Class Program Schedule"
+    loading="lazy"
+    style="width:100%; height:850px; border:1px solid #d0d0d0; border-radius:8px; display:block;"
+  ></iframe>
+  <!-- COPY TO HERE (both grades) -->
+
+  <div class="snippet-note">
+    <b>For sbcjhs1.aralinks.net (Grade 7 &amp; 8)</b> &mdash; pre-selects the
+    Grade 7 tab on load (viewers can still click over to Grade 9 manually;
+    this just controls what shows first):
+  </div>
+  <pre style="background:#fff;border:1px solid #ccc;border-radius:6px;padding:12px;overflow-x:auto;font-size:12px;">&lt;iframe
+  src="https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?grade=G7"
+  title="ACE Class Program Schedule — Grade 7"
+  loading="lazy"
+  style="width:100%; height:850px; border:1px solid #d0d0d0; border-radius:8px; display:block;"
+&gt;&lt;/iframe&gt;</pre>
+
+  <div class="snippet-note">
+    <b>For sbcjhs2.aralinks.net (Grade 9 &amp; 10)</b> &mdash; pre-selects the
+    Grade 9 tab on load:
+  </div>
+  <pre style="background:#fff;border:1px solid #ccc;border-radius:6px;padding:12px;overflow-x:auto;font-size:12px;">&lt;iframe
+  src="https://jrmochoa.github.io/ONBOARDING-SESSION-LAYOUT-POST/class-program.html?grade=G9"
+  title="ACE Class Program Schedule — Grade 9"
+  loading="lazy"
+  style="width:100%; height:850px; border:1px solid #d0d0d0; border-radius:8px; display:block;"
+&gt;&lt;/iframe&gt;</pre>
+
+  <p style="font-size:12px;color:#666;">
+    Adjust <code>height:850px</code> to taste &mdash; the page inside the
+    iframe scrolls on its own if the content is taller than the frame.
+    Since this iframes the live GitHub Pages site directly (not a snapshot),
+    it always reflects whatever's currently on <code>class-program.html</code>
+    &mdash; no regenerating needed when the schedule changes, unlike the
+    earlier static LMS blocks.
+  </p>
+
+</div>
+</body>
+</html>
