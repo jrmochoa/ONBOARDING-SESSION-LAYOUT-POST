@@ -229,12 +229,12 @@ tr.break-row.current-row td:not(.time-col){
   background:rgba(57,255,20,.06);
   color:var(--live);
 }
-td.current, tr.current-row td.time-col{
+td.current, tr.current-row td:not(.time-col){
   position:relative;
   background:rgba(57,255,20,.05) !important;
   box-shadow:inset 0 0 0 1px var(--live);
 }
-td.current::before, tr.current-row td.time-col::before{
+td.current::before, tr.current-row td:not(.time-col)::before{
   content:"● NOW";
   position:absolute;
   top:2px;
@@ -245,7 +245,6 @@ td.current::before, tr.current-row td.time-col::before{
   color:var(--live);
   animation:pulseLive 1.4s infinite;
 }
-tr.current-row td.time-col::before{ left:4px; right:auto; }
 @keyframes pulseLive{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
 
 /* The one cell a deep link from index.html or teacher-schedule.html points

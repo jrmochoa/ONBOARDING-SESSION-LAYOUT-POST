@@ -183,7 +183,7 @@ function renderTeacher(teacher){
 
   const routineRows = CLASS_PROGRAM.meta.commonRoutine.map(r=>{
     const isNow = days.some(d=>isPeriodNow(d, r.time, now));
-    return `<tr class="routine-row${isNow ? " current-row" : ""}"><td class="time-col">${r.time}</td>${days.map(()=>"<td></td>").join("")}</tr>`;
+    return `<tr class="routine-row${isNow ? " current-row" : ""}"><td class="time-col">${r.time}</td><td colspan="${days.length}">${r.label}</td></tr>`;
   }).join("");
 
   const bodyRows = times.map(time=>{
