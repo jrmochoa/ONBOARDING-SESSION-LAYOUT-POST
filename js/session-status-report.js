@@ -61,7 +61,6 @@ function renderReport(){
     <table>
       <thead>
         <tr><th class="corner"></th><th colspan="5">ACE Onboarding Session</th></tr>
-        <tr><th class="corner"></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
       </thead>
       <tbody>${bodyRows}</tbody>
     </table>

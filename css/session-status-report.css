@@ -99,21 +99,12 @@ table{
 thead th{
   font-family:'Space Grotesk',sans-serif;
   font-weight:700;
+  font-size:13px;
   color:var(--cyan);
   text-align:center;
   padding:8px 6px;
   border-bottom:1px solid var(--line);
   letter-spacing:.3px;
-}
-thead tr:first-child th{
-  font-size:13px;
-}
-thead tr:last-child th{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;
-  color:var(--muted);
-  padding-top:2px;
-  padding-bottom:8px;
 }
 th.corner{ background:transparent; border-bottom:none; }
 tbody td{
