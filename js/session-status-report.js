@@ -30,19 +30,18 @@ function gradeNumber(grade){
 
 function renderReport(){
   const grades = buildSessionStatus();
-  const rows = [];
-  ["G7", "G9"].filter(g=>grades[g]).forEach(grade=>{
-    Object.keys(grades[grade]).sort().forEach(section=>{
-      rows.push({ grade, section, done: grades[grade][section] });
-    });
-  });
 
-  const bodyRows = rows.map(r=>{
-    const cells = [1,2,3,4,5].map(n=>{
-      const isDone = n === 1 ? true : !!r.done[n];
-      return `<td class="mark-cell">${isDone ? "&#10003;" : ""}</td>`;
+  const bodyRows = ["G7", "G9"].filter(g=>grades[g]).map(grade=>{
+    const divider = `<tr class="grade-divider"><td colspan="6">Grade ${gradeNumber(grade)}</td></tr>`;
+    const sectionRows = Object.keys(grades[grade]).sort().map(section=>{
+      const done = grades[grade][section];
+      const cells = [1,2,3,4,5].map(n=>{
+        const isDone = n === 1 ? true : !!done[n];
+        return `<td class="mark-cell${isDone ? " done" : ""}">${isDone ? "&#10003;" : ""}</td>`;
+      }).join("");
+      return `<tr><td class="row-label ${grade.toLowerCase()}">${gradeNumber(grade)} ${section.toUpperCase()}</td>${cells}</tr>`;
     }).join("");
-    return `<tr><td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>${cells}</tr>`;
+    return divider + sectionRows;
   }).join("");
 
   document.getElementById("reportTable").innerHTML = `
@@ -57,3 +56,4 @@ function renderReport(){
 }
 
 renderReport();
+initThemeToggle("themeToggle", renderReport);

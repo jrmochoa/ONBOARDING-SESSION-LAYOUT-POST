@@ -3,56 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>ACE Onboarding Session — Status Report</title>
-<style>
-  body{
-    margin:0;
-    padding:32px;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#fff;
-    color:#000;
-  }
-  .wrap{ max-width:720px; margin:0 auto; }
-  h1{ font-size:18px; margin:0 0 4px; }
-  .sub{ font-size:12px; color:#555; margin:0 0 18px; }
-  table{
-    border-collapse:collapse;
-    width:100%;
-  }
-  th, td{
-    border:1px solid #000;
-    padding:6px 10px;
-    text-align:center;
-  }
-  thead th{
-    font-weight:700;
-  }
-  th.corner{ border-top:none; border-left:none; }
-  .row-label{
-    text-align:left;
-    color:#1237B3;
-    font-weight:600;
-    white-space:nowrap;
-  }
-  .mark-cell{
-    font-weight:700;
-    color:#16A34A;
-  }
-  .legend{ margin-top:14px; font-size:11px; color:#555; }
-  @media print{
-    body{ padding:0; }
-    .legend{ display:none; }
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/session-status-report.css">
+<script>(function(){var s=localStorage.getItem('ace-schedule-theme');var f;try{f=window.self!==window.top;}catch(e){f=true;}document.documentElement.setAttribute('data-theme',(s==='light'||s==='dark')?s:(f?'light':'dark'));if(f)document.documentElement.setAttribute('data-embedded','true');})();</script>
 </head>
 <body>
 
 <div class="wrap">
-  <h1>ACE Onboarding Session — Status Report</h1>
-  <p class="sub">Computed live from <code>js/data.js</code> — nothing here is hand-typed.</p>
+  <div class="pagehead">
+    <div class="pagehead-top">
+      <h1>Session Status Report</h1>
+      <button id="themeToggle" class="theme-toggle"></button>
+    </div>
+    <p class="sub">Every section's 5 onboarding sessions, marked done or upcoming — computed live from <code>js/data.js</code>, nothing here is hand-typed.</p>
+  </div>
+
   <div id="reportTable"></div>
-  <p class="legend">✓ = session held (or the shared online kickoff, Session 1, which already took place). Blank = upcoming.</p>
+
+  <p class="legend"><span class="mark-cell">&#10003;</span> = session held (or the shared online kickoff, Session 1, which already took place). Blank = upcoming.</p>
 </div>
 
+<script src="js/theme.js"></script>
 <script src="js/data.js"></script>
 <script src="js/session-status-report.js"></script>
 </body>
