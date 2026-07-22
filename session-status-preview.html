@@ -112,6 +112,13 @@ function shortDate(dateStr){
   // "July 21" -> "Jul 21"
   return dateStr.replace(/^(\w{3})\w*/, "$1");
 }
+function shortTime(m){
+  // "12:45 - 1:25" -> "12:45" (start time only, matches this project's
+  // no-AM/PM display convention elsewhere — full range stays in the
+  // hover tooltip via tooltipFor()).
+  if(!m.time) return "";
+  return m.time.split(" - ")[0].trim();
+}
 function tooltipFor(m){
   if(!m.date) return "Not yet scheduled";
   return `${m.day}, ${m.date} · ${m.time}`;
@@ -138,17 +145,17 @@ const ROWS = sectionRows();
   const css = `
     #style1{font-family:Arial,Helvetica,sans-serif;background:#fff;border:1px solid #000;padding:16px;}
     #style1 table{border-collapse:collapse;width:100%;}
-    #style1 th,#style1 td{border:1px solid #000;padding:6px 10px;text-align:center;}
+    #style1 th,#style1 td{border:1px solid #000;padding:6px 8px;text-align:center;}
     #style1 thead th{font-weight:700;}
     #style1 .row-label{text-align:left;color:#1237B3;font-weight:600;white-space:nowrap;}
-    #style1 .mark{font-weight:700;color:#16A34A;font-size:13px;cursor:default;}
-    #style1 .mdate{display:block;font-weight:400;color:#666;font-size:9.5px;margin-top:2px;}
+    #style1 .mark{font-weight:700;color:#16A34A;font-size:13px;cursor:default;min-width:64px;}
+    #style1 .mdate{display:block;font-weight:400;color:#666;font-size:9px;margin-top:2px;white-space:nowrap;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
   const body = ROWS.map(r=>`
     <tr>
       <td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
-      ${r.marks.map(m=>`<td class="mark" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? `<span class="mdate">${shortDate(m.date)}</span>` : ""}</td>`).join("")}
+      ${r.marks.map(m=>`<td class="mark" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? `<span class="mdate">${shortDate(m.date)} · ${shortTime(m)}</span>` : ""}</td>`).join("")}
     </tr>
   `).join("");
   document.getElementById("style1").innerHTML = `
@@ -169,14 +176,14 @@ const ROWS = sectionRows();
     #style2 table{width:100%;border-collapse:collapse;font-size:13px;}
     #style2 thead th{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#00E5FF;text-align:center;padding:8px 6px;border-bottom:1px solid #1c2436;}
     #style2 thead tr:last-child th{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5f6b85;font-weight:400;padding-top:2px;padding-bottom:8px;}
-    #style2 tbody td{padding:8px 10px;border-bottom:1px solid #1c2436;text-align:center;cursor:default;}
+    #style2 tbody td{padding:8px 8px;border-bottom:1px solid #1c2436;text-align:center;cursor:default;}
     #style2 tbody tr:last-child td{border-bottom:none;}
     #style2 .row-label{text-align:left;font-weight:600;color:#E6ECFA;white-space:nowrap;padding-left:12px;border-left:3px solid transparent;}
     #style2 .row-label.g7{border-left-color:#4E79EC;}
     #style2 .row-label.g9{border-left-color:#16A34A;}
-    #style2 .mark{font-size:14px;font-weight:700;color:#1c2436;}
+    #style2 .mark{font-size:14px;font-weight:700;color:#1c2436;min-width:64px;}
     #style2 .mark.done{color:#39FF14;}
-    #style2 .mdate{display:block;font-size:9.5px;font-weight:400;color:#5f6b85;margin-top:2px;}
+    #style2 .mdate{display:block;font-size:9px;font-weight:400;color:#5f6b85;margin-top:2px;white-space:nowrap;}
     #style2 .divider td{text-align:left;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#5f6b85;background:#0d1220;padding:6px 10px;border-bottom:1px solid #1c2436;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
@@ -188,7 +195,7 @@ const ROWS = sectionRows();
     body += rows.map(r=>`
       <tr>
         <td class="row-label ${grade.toLowerCase()}">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
-        ${r.marks.map(m=>`<td class="mark${m.done?" done":""}" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? `<span class="mdate">${shortDate(m.date)}</span>` : ""}</td>`).join("")}
+        ${r.marks.map(m=>`<td class="mark${m.done?" done":""}" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? `<span class="mdate">${shortDate(m.date)} · ${shortTime(m)}</span>` : ""}</td>`).join("")}
       </tr>
     `).join("");
   });
@@ -211,16 +218,18 @@ const ROWS = sectionRows();
     #style3 .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;min-width:160px;}
     #style3 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
     #style3 .name .g.g7{background:#1237B3;} #style3 .name .g.g9{background:#16A34A;}
-    #style3 .dots{display:flex;gap:8px;}
-    #style3 .dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;cursor:default;}
+    #style3 .dots{display:flex;gap:10px;}
+    #style3 .dot-col{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:default;}
+    #style3 .dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;}
     #style3 .dot.done{background:#16A34A;color:#fff;}
     #style3 .dot.upcoming{background:#fff;border:2px solid #d7dae2;color:#9aa1b4;}
+    #style3 .dtime{font-size:8.5px;font-family:'JetBrains Mono',monospace;color:#9aa1b4;white-space:nowrap;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
   document.getElementById("style3").innerHTML = ROWS.map(r=>`
     <div class="row">
       <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
-      <div class="dots">${r.marks.map((m,i)=>`<div class="dot ${m.done?"done":"upcoming"}" title="${tooltipFor(m)}">${i+1}</div>`).join("")}</div>
+      <div class="dots">${r.marks.map((m,i)=>`<div class="dot-col" title="${tooltipFor(m)}"><div class="dot ${m.done?"done":"upcoming"}">${i+1}</div>${m.date ? `<span class="dtime">${shortTime(m)}</span>` : ""}</div>`).join("")}</div>
     </div>
   `).join("");
 })();
@@ -232,16 +241,16 @@ const ROWS = sectionRows();
     #style4 table{border-collapse:separate;border-spacing:4px;}
     #style4 th{font-family:'JetBrains Mono',monospace;font-size:10px;color:#9aa1b4;font-weight:700;padding:0 4px 4px;}
     #style4 .row-label{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;text-align:left;padding-right:10px;white-space:nowrap;}
-    #style4 .block{width:44px;height:38px;border-radius:5px;text-align:center;vertical-align:middle;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;cursor:default;}
+    #style4 .block{width:58px;height:48px;border-radius:5px;text-align:center;vertical-align:middle;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;cursor:default;}
     #style4 .block.done{background:#16A34A;color:#fff;}
     #style4 .block.upcoming{background:#EDEFF3;color:#9aa1b4;}
-    #style4 .bdate{display:block;font-size:8.5px;font-weight:400;opacity:.85;margin-top:1px;}
+    #style4 .bdate{display:block;font-size:8.5px;font-weight:400;opacity:.85;margin-top:1px;white-space:nowrap;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
   const body = ROWS.map(r=>`
     <tr>
       <td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
-      ${r.marks.map((m,i)=>`<td class="block ${m.done?"done":"upcoming"}" title="${tooltipFor(m)}">${i+1}${m.date ? `<span class="bdate">${shortDate(m.date)}</span>` : ""}</td>`).join("")}
+      ${r.marks.map((m,i)=>`<td class="block ${m.done?"done":"upcoming"}" title="${tooltipFor(m)}">${i+1}${m.date ? `<span class="bdate">${shortDate(m.date)} · ${shortTime(m)}</span>` : ""}</td>`).join("")}
     </tr>
   `).join("");
   document.getElementById("style4").innerHTML = `
