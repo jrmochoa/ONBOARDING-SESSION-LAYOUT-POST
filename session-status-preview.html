@@ -106,6 +106,17 @@
   </div>
   <div id="style7"></div>
 </div>
+<div class="divider"></div>
+
+<!-- ============ 8. CALENDAR MONTH VIEW ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">08 &middot; Calendar Month View</span>
+    <h2>Flip the axis: by date, not by section</h2>
+    <p>Every style above answers "how is this section doing?" This one answers a different question — "what's happening this week?" A real July 2026 calendar grid, one small dot per session on its actual date (blue = Grade 7, green = Grade 9, filled = done, hollow = upcoming). Hover any dot for section + subject + time.</p>
+  </div>
+  <div id="style8"></div>
+</div>
 
 <script src="js/data.js"></script>
 <script>
@@ -375,6 +386,68 @@ const ROWS = sectionRows();
   document.getElementById("style7").innerHTML = `
     <div class="axis" style="margin-left:184px;"><span>June 29</span><span>Latest scheduled</span></div>
     ${rowsHtml}
+  `;
+})();
+
+/* ================= 8. CALENDAR MONTH VIEW ================= */
+(function(){
+  // Flat list of every non-cancelled session with its real calendar date,
+  // grouped by day-of-month — built straight from SCHEDULE (not from
+  // ROWS/sectionRows(), since this view needs per-session subject too,
+  // which the section-grouped shape upstream doesn't carry).
+  const byDay = {};
+  Object.entries(SCHEDULE).forEach(([week, rows])=>{
+    rows.forEach(([time, day, grade, act, num, status])=>{
+      if(num === "CANCELLED") return;
+      const m = act.match(/^(.*)\s\((.+)\)$/);
+      const section = m ? m[1] : act;
+      const subject = m ? m[2] : "";
+      const dateStr = DAY_DATES[week][day]; // "July N"
+      const dayNum = Number(dateStr.split(" ")[1]);
+      if(!byDay[dayNum]) byDay[dayNum] = [];
+      byDay[dayNum].push({ grade, section, subject, time, day, done: status === "DONE" });
+    });
+  });
+
+  const css = `
+    #style8{background:#fff;border:1px solid #e2e5ec;border-radius:10px;padding:16px;max-width:820px;}
+    #style8 .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+    #style8 .cal-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;}
+    #style8 .cal-kickoff{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5b6070;}
+    #style8 .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+    #style8 .dow{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#9aa1b4;text-align:center;padding:2px 0 6px;}
+    #style8 .day{min-height:64px;border:1px solid #eceef3;border-radius:6px;padding:4px;background:#fafbfc;}
+    #style8 .day.empty{background:transparent;border-color:transparent;}
+    #style8 .day.hasnone{opacity:.55;}
+    #style8 .daynum{font-family:'JetBrains Mono',monospace;font-size:10px;color:#9aa1b4;font-weight:700;}
+    #style8 .dots{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;}
+    #style8 .dot{width:9px;height:9px;border-radius:50%;cursor:default;}
+    #style8 .dot.g7.done{background:#1237B3;}
+    #style8 .dot.g7.upcoming{background:#fff;border:1.5px solid #1237B3;}
+    #style8 .dot.g9.done{background:#16A34A;}
+    #style8 .dot.g9.upcoming{background:#fff;border:1.5px solid #16A34A;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+
+  const firstWeekday = new Date(2026, 6, 1).getDay(); // 0=Sun
+  const daysInMonth = new Date(2026, 7, 0).getDate(); // 31
+  const cells = [];
+  for(let i=0;i<firstWeekday;i++) cells.push(`<div class="day empty"></div>`);
+  for(let d=1; d<=daysInMonth; d++){
+    const sessions = byDay[d] || [];
+    const dots = sessions.map(s=>`<div class="dot ${s.grade.toLowerCase()} ${s.done?"done":"upcoming"}" title="${s.day}, July ${d} · ${gradeNumber(s.grade)} ${s.section} (${s.subject}) · ${s.time}"></div>`).join("");
+    cells.push(`<div class="day${sessions.length?"":" hasnone"}"><div class="daynum">${d}</div><div class="dots">${dots}</div></div>`);
+  }
+
+  document.getElementById("style8").innerHTML = `
+    <div class="cal-head">
+      <span class="cal-title">July 2026</span>
+      <span class="cal-kickoff">Online kickoff (all sections): June 29</span>
+    </div>
+    <div class="grid">
+      ${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d=>`<div class="dow">${d}</div>`).join("")}
+      ${cells.join("")}
+    </div>
   `;
 })();
 </script>
