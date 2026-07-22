@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Session Status Report — Table Style Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --page-bg:#EDEFF3; --page-ink:#1a1d29; }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:Inter,sans-serif;background:var(--page-bg);color:var(--page-ink);}
+  .intro{max-width:900px;margin:0 auto;padding:40px 24px 10px;}
+  .intro h1{font-family:'Space Grotesk',sans-serif;font-size:26px;margin:0 0 8px;}
+  .intro p{color:#5b6070;font-size:14px;line-height:1.5;margin:0;}
+  .sample{max-width:1000px;margin:0 auto;padding:36px 24px 60px;}
+  .sample-head{margin-bottom:18px;}
+  .sample-head .label{
+    display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+    letter-spacing:1px;text-transform:uppercase;color:#5b6070;background:#fff;border:1px solid #d7dae2;
+    border-radius:999px;padding:4px 12px;margin-bottom:10px;
+  }
+  .sample-head h2{font-family:'Space Grotesk',sans-serif;font-size:22px;margin:0 0 6px;}
+  .sample-head p{font-size:13px;color:#5b6070;margin:0;max-width:720px;line-height:1.5;}
+  .divider{max-width:1000px;margin:0 auto;height:1px;background:#d7dae2;}
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Session Status Report — Table Style Preview</h1>
+  <p>Five different visual directions for the sections&nbsp;&times;&nbsp;sessions status grid, all rendered from the real, live SCHEDULE data in <code>js/data.js</code> — same data as <code>session-status-report.html</code>, no snapshots. Scroll through and tell me which one (or which pieces of which) to carry into the real page.</p>
+</div>
+
+<!-- ============ 1. PRINT SPREADSHEET ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">01 &middot; Print Spreadsheet</span>
+    <h2>Plain report grid</h2>
+    <p>Black hairline borders, white background, blue row labels, green checkmarks — closest to the reference image this report started from. No theme, prints cleanly as-is, reads like an actual spreadsheet export.</p>
+  </div>
+  <div id="style1"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 2. OPS DASHBOARD (current) ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">02 &middot; Ops Dashboard (current)</span>
+    <h2>What session-status-report.html uses today</h2>
+    <p>Dark/monospace, matching class-program.html / teacher-schedule.html / session-breakdown.html's shared theme — grade-colored left border per row, cyan headers, green checkmarks. Included here for direct side-by-side comparison with the alternatives below.</p>
+  </div>
+  <div id="style2"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 3. PROGRESS DOTS ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">03 &middot; Progress Dots</span>
+    <h2>Circles instead of checkmarks</h2>
+    <p>No table borders — each row is a light card with 5 small circles (filled = done, hollow = upcoming), reusing the same "session-num-badge" circle treatment already used on session-breakdown.html. Softer and friendlier than a grid; still shows exactly which session is which.</p>
+  </div>
+  <div id="style3"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 4. HEATMAP BLOCKS ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">04 &middot; Heatmap Blocks</span>
+    <h2>Solid-color scan view</h2>
+    <p>Each cell is a solid colored block (green = done, slate = upcoming) with the session number inside, no glyphs to squint at. Densest and fastest to scan at a glance across many sections — good for a "how's everyone doing" overview rather than per-cell detail.</p>
+  </div>
+  <div id="style4"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 5. PROGRESS BAR SUMMARY ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">05 &middot; Progress Bar Summary</span>
+    <h2>Completion at a glance</h2>
+    <p>One segmented bar per section (5 slices, filled left-to-right) plus an "X/5" fraction — trades exact per-session identity for the fastest possible "how close is this section to finishing" read. Best as a companion/summary view, not a full replacement for the detailed grid.</p>
+  </div>
+  <div id="style5"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script>
+/* ================= SHARED DATA (same logic as js/session-status-report.js) ================= */
+function buildSessionStatus(){
+  const grades = {};
+  Object.entries(SCHEDULE).forEach(([week, rows])=>{
+    rows.forEach(([time, day, grade, act, num, status])=>{
+      if(num === "CANCELLED") return;
+      const m = act.match(/^(.*)\s\((.+)\)$/);
+      const section = m ? m[1] : act;
+      if(!grades[grade]) grades[grade] = {};
+      if(!grades[grade][section]) grades[grade][section] = {};
+      grades[grade][section][num] = status === "DONE";
+    });
+  });
+  return grades;
+}
+function gradeNumber(grade){ return grade.replace("G", ""); }
+function sectionRows(){
+  const grades = buildSessionStatus();
+  const rows = [];
+  ["G7","G9"].filter(g=>grades[g]).forEach(grade=>{
+    Object.keys(grades[grade]).sort().forEach(section=>{
+      const done = grades[grade][section];
+      const marks = [1,2,3,4,5].map(n => n===1 ? true : !!done[n]);
+      rows.push({ grade, section, marks, count: marks.filter(Boolean).length });
+    });
+  });
+  return rows;
+}
+const ROWS = sectionRows();
+
+/* ================= 1. PRINT SPREADSHEET ================= */
+(function(){
+  const css = `
+    #style1{font-family:Arial,Helvetica,sans-serif;background:#fff;border:1px solid #000;padding:16px;}
+    #style1 table{border-collapse:collapse;width:100%;}
+    #style1 th,#style1 td{border:1px solid #000;padding:6px 10px;text-align:center;}
+    #style1 thead th{font-weight:700;}
+    #style1 .row-label{text-align:left;color:#1237B3;font-weight:600;white-space:nowrap;}
+    #style1 .mark{font-weight:700;color:#16A34A;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  const body = ROWS.map(r=>`
+    <tr>
+      <td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
+      ${r.marks.map(m=>`<td class="mark">${m ? "&#10003;" : ""}</td>`).join("")}
+    </tr>
+  `).join("");
+  document.getElementById("style1").innerHTML = `
+    <table>
+      <thead>
+        <tr><th></th><th colspan="5">ACE Onboarding Session</th></tr>
+        <tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+      </thead>
+      <tbody>${body}</tbody>
+    </table>
+  `;
+})();
+
+/* ================= 2. OPS DASHBOARD ================= */
+(function(){
+  const css = `
+    #style2{font-family:'JetBrains Mono',monospace;background:#0A0E17;color:#E6ECFA;border:1px solid #1c2436;border-radius:8px;padding:14px;}
+    #style2 table{width:100%;border-collapse:collapse;font-size:13px;}
+    #style2 thead th{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#00E5FF;text-align:center;padding:8px 6px;border-bottom:1px solid #1c2436;}
+    #style2 thead tr:last-child th{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5f6b85;font-weight:400;padding-top:2px;padding-bottom:8px;}
+    #style2 tbody td{padding:8px 10px;border-bottom:1px solid #1c2436;text-align:center;}
+    #style2 tbody tr:last-child td{border-bottom:none;}
+    #style2 .row-label{text-align:left;font-weight:600;color:#E6ECFA;white-space:nowrap;padding-left:12px;border-left:3px solid transparent;}
+    #style2 .row-label.g7{border-left-color:#4E79EC;}
+    #style2 .row-label.g9{border-left-color:#16A34A;}
+    #style2 .mark{font-size:15px;font-weight:700;color:#1c2436;}
+    #style2 .mark.done{color:#39FF14;}
+    #style2 .divider td{text-align:left;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#5f6b85;background:#0d1220;padding:6px 10px;border-bottom:1px solid #1c2436;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  let body = "";
+  ["G7","G9"].forEach(grade=>{
+    const rows = ROWS.filter(r=>r.grade===grade);
+    if(!rows.length) return;
+    body += `<tr class="divider"><td colspan="6">Grade ${gradeNumber(grade)}</td></tr>`;
+    body += rows.map(r=>`
+      <tr>
+        <td class="row-label ${grade.toLowerCase()}">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
+        ${r.marks.map(m=>`<td class="mark${m?" done":""}">${m ? "&#10003;" : ""}</td>`).join("")}
+      </tr>
+    `).join("");
+  });
+  document.getElementById("style2").innerHTML = `
+    <table>
+      <thead>
+        <tr><th></th><th colspan="5">ACE Onboarding Session</th></tr>
+        <tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+      </thead>
+      <tbody>${body}</tbody>
+    </table>
+  `;
+})();
+
+/* ================= 3. PROGRESS DOTS ================= */
+(function(){
+  const css = `
+    #style3{display:flex;flex-direction:column;gap:8px;}
+    #style3 .row{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid #e2e5ec;border-radius:10px;padding:10px 16px;box-shadow:0 1px 2px rgba(20,25,40,.04);}
+    #style3 .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;min-width:160px;}
+    #style3 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
+    #style3 .name .g.g7{background:#1237B3;} #style3 .name .g.g9{background:#16A34A;}
+    #style3 .dots{display:flex;gap:8px;}
+    #style3 .dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;}
+    #style3 .dot.done{background:#16A34A;color:#fff;}
+    #style3 .dot.upcoming{background:#fff;border:2px solid #d7dae2;color:#9aa1b4;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  document.getElementById("style3").innerHTML = ROWS.map(r=>`
+    <div class="row">
+      <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
+      <div class="dots">${r.marks.map((m,i)=>`<div class="dot ${m?"done":"upcoming"}">${i+1}</div>`).join("")}</div>
+    </div>
+  `).join("");
+})();
+
+/* ================= 4. HEATMAP BLOCKS ================= */
+(function(){
+  const css = `
+    #style4{display:inline-block;background:#fff;border:1px solid #e2e5ec;border-radius:10px;padding:16px;}
+    #style4 table{border-collapse:separate;border-spacing:4px;}
+    #style4 th{font-family:'JetBrains Mono',monospace;font-size:10px;color:#9aa1b4;font-weight:700;padding:0 4px 4px;}
+    #style4 .row-label{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;text-align:left;padding-right:10px;white-space:nowrap;}
+    #style4 .block{width:34px;height:28px;border-radius:5px;text-align:center;vertical-align:middle;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;}
+    #style4 .block.done{background:#16A34A;color:#fff;}
+    #style4 .block.upcoming{background:#EDEFF3;color:#9aa1b4;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  const body = ROWS.map(r=>`
+    <tr>
+      <td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
+      ${r.marks.map((m,i)=>`<td class="block ${m?"done":"upcoming"}">${i+1}</td>`).join("")}
+    </tr>
+  `).join("");
+  document.getElementById("style4").innerHTML = `
+    <table>
+      <thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+      <tbody>${body}</tbody>
+    </table>
+  `;
+})();
+
+/* ================= 5. PROGRESS BAR SUMMARY ================= */
+(function(){
+  const css = `
+    #style5{display:flex;flex-direction:column;gap:10px;}
+    #style5 .row{display:flex;align-items:center;gap:14px;}
+    #style5 .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;min-width:170px;}
+    #style5 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
+    #style5 .name .g.g7{background:#1237B3;} #style5 .name .g.g9{background:#16A34A;}
+    #style5 .bar{flex:1;display:flex;gap:3px;height:14px;}
+    #style5 .seg{flex:1;border-radius:3px;background:#e2e5ec;}
+    #style5 .seg.filled{background:#16A34A;}
+    #style5 .frac{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#5b6070;min-width:32px;text-align:right;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  document.getElementById("style5").innerHTML = ROWS.map(r=>`
+    <div class="row">
+      <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
+      <div class="bar">${r.marks.map(m=>`<div class="seg ${m?"filled":""}"></div>`).join("")}</div>
+      <div class="frac">${r.count}/5</div>
+    </div>
+  `).join("");
+})();
+</script>
+</body>
+</html>
