@@ -28,7 +28,7 @@
 
 <div class="intro">
   <h1>Session Status Report — Table Style Preview</h1>
-  <p>Five different visual directions for the sections&nbsp;&times;&nbsp;sessions status grid, all rendered from the real, live SCHEDULE data in <code>js/data.js</code> — same data as <code>session-status-report.html</code>, no snapshots. Scroll through and tell me which one (or which pieces of which) to carry into the real page.</p>
+  <p>Five different visual directions for the sections&nbsp;&times;&nbsp;sessions status grid, all rendered from the real, live SCHEDULE data in <code>js/data.js</code> — same data as <code>session-status-report.html</code>, no snapshots. Each session's date/time is shown where the cell has room, and always available on hover (title tooltip) everywhere else. Scroll through and tell me which one (or which pieces of which) to carry into the real page.</p>
 </div>
 
 <!-- ============ 1. PRINT SPREADSHEET ============ -->
@@ -36,7 +36,7 @@
   <div class="sample-head">
     <span class="label">01 &middot; Print Spreadsheet</span>
     <h2>Plain report grid</h2>
-    <p>Black hairline borders, white background, blue row labels, green checkmarks — closest to the reference image this report started from. No theme, prints cleanly as-is, reads like an actual spreadsheet export.</p>
+    <p>Black hairline borders, white background, blue row labels, green checkmarks — closest to the reference image this report started from. Each cell now shows the session's date on a second line; hover any cell for the full day + time.</p>
   </div>
   <div id="style1"></div>
 </div>
@@ -47,7 +47,7 @@
   <div class="sample-head">
     <span class="label">02 &middot; Ops Dashboard (current)</span>
     <h2>What session-status-report.html uses today</h2>
-    <p>Dark/monospace, matching class-program.html / teacher-schedule.html / session-breakdown.html's shared theme — grade-colored left border per row, cyan headers, green checkmarks. Included here for direct side-by-side comparison with the alternatives below.</p>
+    <p>Dark/monospace, matching class-program.html / teacher-schedule.html / session-breakdown.html's shared theme — grade-colored left border per row, cyan headers, green checkmarks, small muted date under each mark (same "day-name/date-num" treatment already used elsewhere on the site). Hover for the full day + time.</p>
   </div>
   <div id="style2"></div>
 </div>
@@ -58,7 +58,7 @@
   <div class="sample-head">
     <span class="label">03 &middot; Progress Dots</span>
     <h2>Circles instead of checkmarks</h2>
-    <p>No table borders — each row is a light card with 5 small circles (filled = done, hollow = upcoming), reusing the same "session-num-badge" circle treatment already used on session-breakdown.html. Softer and friendlier than a grid; still shows exactly which session is which.</p>
+    <p>No table borders — each row is a light card with 5 small circles (filled = done, hollow = upcoming), reusing the same "session-num-badge" circle treatment already used on session-breakdown.html. Too small to print date/time inline, so it's on hover only — the tradeoff for the friendlier, less spreadsheet-y look.</p>
   </div>
   <div id="style3"></div>
 </div>
@@ -69,7 +69,7 @@
   <div class="sample-head">
     <span class="label">04 &middot; Heatmap Blocks</span>
     <h2>Solid-color scan view</h2>
-    <p>Each cell is a solid colored block (green = done, slate = upcoming) with the session number inside, no glyphs to squint at. Densest and fastest to scan at a glance across many sections — good for a "how's everyone doing" overview rather than per-cell detail.</p>
+    <p>Each cell is a solid colored block (green = done, slate = upcoming) with the session number and a tiny date on two lines, no glyphs to squint at. Densest and fastest to scan at a glance across many sections — hover for the full day + time.</p>
   </div>
   <div id="style4"></div>
 </div>
@@ -80,14 +80,19 @@
   <div class="sample-head">
     <span class="label">05 &middot; Progress Bar Summary</span>
     <h2>Completion at a glance</h2>
-    <p>One segmented bar per section (5 slices, filled left-to-right) plus an "X/5" fraction — trades exact per-session identity for the fastest possible "how close is this section to finishing" read. Best as a companion/summary view, not a full replacement for the detailed grid.</p>
+    <p>One segmented bar per section (5 slices, filled left-to-right) plus an "X/5" fraction — trades exact per-session identity for the fastest possible "how close is this section to finishing" read. Each segment is individually hoverable for that session's date/time; best as a companion/summary view, not a full replacement for the detailed grid.</p>
   </div>
   <div id="style5"></div>
 </div>
 
 <script src="js/data.js"></script>
 <script>
-/* ================= SHARED DATA (same logic as js/session-status-report.js) ================= */
+/* ================= SHARED DATA (same logic as js/session-status-report.js,
+   extended with date/day/time per session so every cell can show or at
+   least tooltip when it happened). ================= */
+const ONLINE_SESSION = { G7: { time: "8:00 - 9:00 AM" }, G9: { time: "10:00 - 11:00 AM" } };
+const ONLINE_DATE = "June 29";
+
 function buildSessionStatus(){
   const grades = {};
   Object.entries(SCHEDULE).forEach(([week, rows])=>{
@@ -97,20 +102,31 @@ function buildSessionStatus(){
       const section = m ? m[1] : act;
       if(!grades[grade]) grades[grade] = {};
       if(!grades[grade][section]) grades[grade][section] = {};
-      grades[grade][section][num] = status === "DONE";
+      grades[grade][section][num] = { done: status === "DONE", date: DAY_DATES[week][day], day, time };
     });
   });
   return grades;
 }
 function gradeNumber(grade){ return grade.replace("G", ""); }
+function shortDate(dateStr){
+  // "July 21" -> "Jul 21"
+  return dateStr.replace(/^(\w{3})\w*/, "$1");
+}
+function tooltipFor(m){
+  if(!m.date) return "Not yet scheduled";
+  return `${m.day}, ${m.date} · ${m.time}`;
+}
 function sectionRows(){
   const grades = buildSessionStatus();
   const rows = [];
   ["G7","G9"].filter(g=>grades[g]).forEach(grade=>{
     Object.keys(grades[grade]).sort().forEach(section=>{
-      const done = grades[grade][section];
-      const marks = [1,2,3,4,5].map(n => n===1 ? true : !!done[n]);
-      rows.push({ grade, section, marks, count: marks.filter(Boolean).length });
+      const data = grades[grade][section];
+      const marks = [1,2,3,4,5].map(n=>{
+        if(n === 1) return { done: true, date: ONLINE_DATE, day: "Online", time: ONLINE_SESSION[grade].time };
+        return data[n] || { done: false, date: null, day: null, time: null };
+      });
+      rows.push({ grade, section, marks, count: marks.filter(m=>m.done).length });
     });
   });
   return rows;
@@ -125,13 +141,14 @@ const ROWS = sectionRows();
     #style1 th,#style1 td{border:1px solid #000;padding:6px 10px;text-align:center;}
     #style1 thead th{font-weight:700;}
     #style1 .row-label{text-align:left;color:#1237B3;font-weight:600;white-space:nowrap;}
-    #style1 .mark{font-weight:700;color:#16A34A;}
+    #style1 .mark{font-weight:700;color:#16A34A;font-size:13px;cursor:default;}
+    #style1 .mdate{display:block;font-weight:400;color:#666;font-size:9.5px;margin-top:2px;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
   const body = ROWS.map(r=>`
     <tr>
       <td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
-      ${r.marks.map(m=>`<td class="mark">${m ? "&#10003;" : ""}</td>`).join("")}
+      ${r.marks.map(m=>`<td class="mark" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? `<span class="mdate">${shortDate(m.date)}</span>` : ""}</td>`).join("")}
     </tr>
   `).join("");
   document.getElementById("style1").innerHTML = `
@@ -152,13 +169,14 @@ const ROWS = sectionRows();
     #style2 table{width:100%;border-collapse:collapse;font-size:13px;}
     #style2 thead th{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#00E5FF;text-align:center;padding:8px 6px;border-bottom:1px solid #1c2436;}
     #style2 thead tr:last-child th{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5f6b85;font-weight:400;padding-top:2px;padding-bottom:8px;}
-    #style2 tbody td{padding:8px 10px;border-bottom:1px solid #1c2436;text-align:center;}
+    #style2 tbody td{padding:8px 10px;border-bottom:1px solid #1c2436;text-align:center;cursor:default;}
     #style2 tbody tr:last-child td{border-bottom:none;}
     #style2 .row-label{text-align:left;font-weight:600;color:#E6ECFA;white-space:nowrap;padding-left:12px;border-left:3px solid transparent;}
     #style2 .row-label.g7{border-left-color:#4E79EC;}
     #style2 .row-label.g9{border-left-color:#16A34A;}
-    #style2 .mark{font-size:15px;font-weight:700;color:#1c2436;}
+    #style2 .mark{font-size:14px;font-weight:700;color:#1c2436;}
     #style2 .mark.done{color:#39FF14;}
+    #style2 .mdate{display:block;font-size:9.5px;font-weight:400;color:#5f6b85;margin-top:2px;}
     #style2 .divider td{text-align:left;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#5f6b85;background:#0d1220;padding:6px 10px;border-bottom:1px solid #1c2436;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
@@ -170,7 +188,7 @@ const ROWS = sectionRows();
     body += rows.map(r=>`
       <tr>
         <td class="row-label ${grade.toLowerCase()}">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
-        ${r.marks.map(m=>`<td class="mark${m?" done":""}">${m ? "&#10003;" : ""}</td>`).join("")}
+        ${r.marks.map(m=>`<td class="mark${m.done?" done":""}" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? `<span class="mdate">${shortDate(m.date)}</span>` : ""}</td>`).join("")}
       </tr>
     `).join("");
   });
@@ -194,7 +212,7 @@ const ROWS = sectionRows();
     #style3 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
     #style3 .name .g.g7{background:#1237B3;} #style3 .name .g.g9{background:#16A34A;}
     #style3 .dots{display:flex;gap:8px;}
-    #style3 .dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;}
+    #style3 .dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;cursor:default;}
     #style3 .dot.done{background:#16A34A;color:#fff;}
     #style3 .dot.upcoming{background:#fff;border:2px solid #d7dae2;color:#9aa1b4;}
   `;
@@ -202,7 +220,7 @@ const ROWS = sectionRows();
   document.getElementById("style3").innerHTML = ROWS.map(r=>`
     <div class="row">
       <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
-      <div class="dots">${r.marks.map((m,i)=>`<div class="dot ${m?"done":"upcoming"}">${i+1}</div>`).join("")}</div>
+      <div class="dots">${r.marks.map((m,i)=>`<div class="dot ${m.done?"done":"upcoming"}" title="${tooltipFor(m)}">${i+1}</div>`).join("")}</div>
     </div>
   `).join("");
 })();
@@ -214,15 +232,16 @@ const ROWS = sectionRows();
     #style4 table{border-collapse:separate;border-spacing:4px;}
     #style4 th{font-family:'JetBrains Mono',monospace;font-size:10px;color:#9aa1b4;font-weight:700;padding:0 4px 4px;}
     #style4 .row-label{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;text-align:left;padding-right:10px;white-space:nowrap;}
-    #style4 .block{width:34px;height:28px;border-radius:5px;text-align:center;vertical-align:middle;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;}
+    #style4 .block{width:44px;height:38px;border-radius:5px;text-align:center;vertical-align:middle;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;cursor:default;}
     #style4 .block.done{background:#16A34A;color:#fff;}
     #style4 .block.upcoming{background:#EDEFF3;color:#9aa1b4;}
+    #style4 .bdate{display:block;font-size:8.5px;font-weight:400;opacity:.85;margin-top:1px;}
   `;
   const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
   const body = ROWS.map(r=>`
     <tr>
       <td class="row-label">${gradeNumber(r.grade)} ${r.section.toUpperCase()}</td>
-      ${r.marks.map((m,i)=>`<td class="block ${m?"done":"upcoming"}">${i+1}</td>`).join("")}
+      ${r.marks.map((m,i)=>`<td class="block ${m.done?"done":"upcoming"}" title="${tooltipFor(m)}">${i+1}${m.date ? `<span class="bdate">${shortDate(m.date)}</span>` : ""}</td>`).join("")}
     </tr>
   `).join("");
   document.getElementById("style4").innerHTML = `
@@ -242,7 +261,7 @@ const ROWS = sectionRows();
     #style5 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
     #style5 .name .g.g7{background:#1237B3;} #style5 .name .g.g9{background:#16A34A;}
     #style5 .bar{flex:1;display:flex;gap:3px;height:14px;}
-    #style5 .seg{flex:1;border-radius:3px;background:#e2e5ec;}
+    #style5 .seg{flex:1;border-radius:3px;background:#e2e5ec;cursor:default;}
     #style5 .seg.filled{background:#16A34A;}
     #style5 .frac{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#5b6070;min-width:32px;text-align:right;}
   `;
@@ -250,7 +269,7 @@ const ROWS = sectionRows();
   document.getElementById("style5").innerHTML = ROWS.map(r=>`
     <div class="row">
       <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
-      <div class="bar">${r.marks.map(m=>`<div class="seg ${m?"filled":""}"></div>`).join("")}</div>
+      <div class="bar">${r.marks.map(m=>`<div class="seg ${m.done?"filled":""}" title="${tooltipFor(m)}"></div>`).join("")}</div>
       <div class="frac">${r.count}/5</div>
     </div>
   `).join("");
