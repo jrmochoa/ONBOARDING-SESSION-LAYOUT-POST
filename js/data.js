@@ -36,13 +36,13 @@ const SCHEDULE = {
     ["1:25 - 2:05","Thursday","G9","Integrity (CLVE)",3,"DONE"]
   ],
   3: [
-    ["7:15 - 8:00","Tuesday","G7","Hope (English)",4],
+    ["7:15 - 8:00","Tuesday","G7","Hope (English)",4,"DONE"],
     ["7:15 - 8:00","Friday","G7","Joy (CLVE)",5],
-    ["7:55 - 8:35","Tuesday","G9","Loyalty (MAPEH)",4],
+    ["7:55 - 8:35","Tuesday","G9","Loyalty (MAPEH)",4,"DONE"],
     ["8:35 - 9:15","Friday","G9","Creativity (AP)",4],
-    ["9:15 - 10:00","Tuesday","G7","Love (English)",3],
+    ["9:15 - 10:00","Tuesday","G7","Love (English)",3,"DONE"],
     ["10:45 - 11:30","Friday","G7","Charity (AP)",5],
-    ["12:45 - 1:25","Tuesday","G9","Industry (Filipino)",5],
+    ["12:45 - 1:25","Tuesday","G9","Industry (Filipino)",5,"DONE"],
     ["12:45 - 1:25","Friday","G9","Serenity (MAPEH)",5]
   ],
   4: [
