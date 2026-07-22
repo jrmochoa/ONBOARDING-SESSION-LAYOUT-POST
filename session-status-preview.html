@@ -84,6 +84,28 @@
   </div>
   <div id="style5"></div>
 </div>
+<div class="divider"></div>
+
+<!-- ============ 6. CHIP STRIP ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">06 &middot; Chip Strip</span>
+    <h2>One line per section</h2>
+    <p>No grid at all — each section is a single flowing line of 5 small pills, each stamped with its own date (green + check = done, outline = upcoming). Reads almost like a compact status feed rather than a spreadsheet; hover any chip for the full day/time.</p>
+  </div>
+  <div id="style6"></div>
+</div>
+<div class="divider"></div>
+
+<!-- ============ 7. TIMELINE TRACK ============ -->
+<div class="sample">
+  <div class="sample-head">
+    <span class="label">07 &middot; Timeline Track</span>
+    <h2>Real chronological spacing</h2>
+    <p>Every other style spaces sessions evenly, which hides something real: some sessions land close together, others have a big gap between them. Here each section is a track from the June&nbsp;29 kickoff to its last scheduled date, with dots placed at their <em>actual</em> calendar position — filled = done. The only style here that visually answers "is this section's pacing even or lumpy?"</p>
+  </div>
+  <div id="style7"></div>
+</div>
 
 <script src="js/data.js"></script>
 <script>
@@ -282,6 +304,78 @@ const ROWS = sectionRows();
       <div class="frac">${r.count}/5</div>
     </div>
   `).join("");
+})();
+
+/* ================= 6. CHIP STRIP ================= */
+(function(){
+  const css = `
+    #style6{display:flex;flex-direction:column;gap:10px;}
+    #style6 .row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;}
+    #style6 .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;min-width:170px;}
+    #style6 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
+    #style6 .name .g.g7{background:#1237B3;} #style6 .name .g.g9{background:#16A34A;}
+    #style6 .chips{display:flex;gap:6px;flex-wrap:wrap;}
+    #style6 .chip{
+      display:inline-flex;align-items:center;gap:4px;font-family:'JetBrains Mono',monospace;font-size:10.5px;
+      font-weight:600;padding:4px 9px;border-radius:999px;cursor:default;white-space:nowrap;
+    }
+    #style6 .chip.done{background:rgba(22,163,74,.12);color:#16A34A;border:1px solid rgba(22,163,74,.3);}
+    #style6 .chip.upcoming{background:#fff;color:#9aa1b4;border:1px solid #d7dae2;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  document.getElementById("style6").innerHTML = ROWS.map(r=>`
+    <div class="row">
+      <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
+      <div class="chips">${r.marks.map(m=>`<span class="chip ${m.done?"done":"upcoming"}" title="${tooltipFor(m)}">${m.done ? "&#10003;" : ""}${m.date ? shortDate(m.date) : "&mdash;"}</span>`).join("")}</div>
+    </div>
+  `).join("");
+})();
+
+/* ================= 7. TIMELINE TRACK ================= */
+(function(){
+  // Parse "June 29" / "July 21" (always 2026 in this dataset) into a
+  // sortable day-of-year number, so dots can be positioned at their real
+  // calendar spacing instead of evenly spaced like every other style here.
+  const MONTH_DAYS = {January:0,February:31,March:59,April:90,May:120,June:151,July:181,August:212,September:243,October:273,November:304,December:334};
+  function dayOfYear(dateStr){
+    const [month, day] = dateStr.split(" ");
+    return MONTH_DAYS[month] + Number(day);
+  }
+  const allDates = ROWS.flatMap(r=>r.marks).filter(m=>m.date).map(m=>dayOfYear(m.date));
+  const minDay = Math.min(...allDates);
+  const maxDay = Math.max(...allDates);
+  const span = maxDay - minDay || 1;
+
+  const css = `
+    #style7{display:flex;flex-direction:column;gap:16px;}
+    #style7 .axis{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:#9aa1b4;margin-bottom:-6px;}
+    #style7 .row{display:flex;align-items:center;gap:14px;}
+    #style7 .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;min-width:170px;}
+    #style7 .name .g{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#fff;border-radius:999px;padding:2px 7px;margin-right:8px;}
+    #style7 .name .g.g7{background:#1237B3;} #style7 .name .g.g9{background:#16A34A;}
+    #style7 .track{position:relative;flex:1;height:20px;}
+    #style7 .track::before{content:"";position:absolute;top:50%;left:0;right:0;height:2px;background:#e2e5ec;transform:translateY(-50%);}
+    #style7 .pt{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);cursor:default;}
+    #style7 .pt.done{background:#16A34A;box-shadow:0 0 0 3px rgba(22,163,74,.15);}
+    #style7 .pt.upcoming{background:#fff;border:2px solid #d7dae2;}
+  `;
+  const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  const rowsHtml = ROWS.map(r=>{
+    const pts = r.marks.filter(m=>m.date).map(m=>{
+      const pct = ((dayOfYear(m.date) - minDay) / span) * 100;
+      return `<div class="pt ${m.done?"done":"upcoming"}" style="left:${pct.toFixed(1)}%" title="${tooltipFor(m)}"></div>`;
+    }).join("");
+    return `
+      <div class="row">
+        <div class="name"><span class="g ${r.grade.toLowerCase()}">${gradeNumber(r.grade)}</span>${r.section.toUpperCase()}</div>
+        <div class="track">${pts}</div>
+      </div>
+    `;
+  }).join("");
+  document.getElementById("style7").innerHTML = `
+    <div class="axis" style="margin-left:184px;"><span>June 29</span><span>Latest scheduled</span></div>
+    ${rowsHtml}
+  `;
 })();
 </script>
 </body>
