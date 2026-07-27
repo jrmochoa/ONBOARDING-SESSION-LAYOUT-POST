@@ -11,7 +11,7 @@
    e.g. "2026-08-07": ["G7","G9"] — no code changes needed beyond this.
    Starts empty. */
 const SHORTENED_DATES = {
-  // "2026-08-07": ["G7", "G9"],
+  "2026-07-29": ["G7", "G9"],
 };
 
 // Ordered list of period slots for a shortened day, per grade. Each

@@ -83,7 +83,7 @@ const DAY_DATES = {
    hoc, can land on any weekday. Add one entry here whenever a shortened
    day is announced, e.g. "2026-08-07": ["G7","G9"]. Starts empty. */
 const SHORTENED_DATES = {
-  // "2026-08-07": ["G7", "G9"],
+  "2026-07-29": ["G7", "G9"],
 };
 
 const SHORTENED_PERIOD_TEMPLATES = {
