@@ -440,11 +440,28 @@ body{
   font-family:'IBM Plex Mono',monospace;
   font-size:19px;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
+  gap:4px;
   text-align:center;
   padding:10px;
   line-height:1.3;
+}
+/* Set by renderDay() (js/render.js) via shortenedTimeFor() (js/data.js)
+   when the day being viewed is a listed shortened-period date for that
+   session's grade — the time shown has already been re-mapped from the
+   normal schedule onto the shortened one, this just flags that it's not
+   the usual time. */
+.shortened-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.6px;
+  color:#1a1200;
+  background:#FFB020;
+  padding:2px 8px;
+  border-radius:999px;
 }
 .session-main{
   position:relative;

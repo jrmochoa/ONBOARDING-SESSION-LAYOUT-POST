@@ -144,9 +144,15 @@ function renderDay(weekNum, day){
     const cancelled = num === "CANCELLED";
     const done = status === "DONE";
     const link = classProgramLink(grade, d, act);
+    // Re-times this session onto the shortened-period schedule when the
+    // day being viewed is a listed shortened date for its grade (see
+    // shortenedTimeFor() in js/data.js) — returns the original time
+    // unchanged on any normal day, so this is a no-op almost always.
+    const displayTime = shortenedTimeFor(weekNum, d, grade, t);
+    const isShortened = displayTime !== t;
     return `
     <div class="session-row ${grade.toLowerCase()}${cancelled ? " cancelled" : ""}">
-      <div class="session-time">${t}</div>
+      <div class="session-time">${displayTime}${isShortened ? `<span class="shortened-tag">SHORTENED</span>` : ""}</div>
       <a class="session-main" href="${link}" onclick="return openClassProgramWindow('${link}')">
         ${done ? doneBadge() : ""}
         <span class="session-badge">${grade.slice(1)}</span>
