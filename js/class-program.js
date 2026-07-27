@@ -15,6 +15,7 @@ let hasScrolledToDeepLink = false;
 const gradeSeg = document.getElementById("gradeSeg");
 const sectionSeg = document.getElementById("sectionSeg");
 const sectionInfo = document.getElementById("sectionInfo");
+const shortenedPanel = document.getElementById("shortenedPanel");
 const scheduleTable = document.getElementById("scheduleTable");
 const nowClock = document.getElementById("nowClock");
 
@@ -191,9 +192,59 @@ function buildRows(data){
   return Array.from(rowsByTime.values());
 }
 
+// "Shortened period" days aren't tied to a day-of-week — they're
+// announced ad hoc and can fall on any weekday (see js/shortened-schedule.js).
+// Renders a standalone panel above the normal weekly grid when today's
+// real date is a listed shortened date for the grade being viewed;
+// otherwise clears/hides it. Same subjects/teachers as the normal
+// schedule, just re-timed onto the grade's shortened-period template —
+// walks that day's normal subject list in order (skipping breaks), so
+// it naturally handles days with fewer than 9 periods (e.g. a typical
+// 8-period Friday) by simply leaving the template's trailing period
+// slot(s) unused rather than assuming every day fills all 9.
+function buildShortenedPanel(data){
+  const pad = n => String(n).padStart(2, "0");
+  const now = new Date();
+  const todayISO = now.getFullYear() + "-" + pad(now.getMonth()+1) + "-" + pad(now.getDate());
+  const gradesToday = SHORTENED_DATES[todayISO];
+  const template = SHORTENED_PERIOD_TEMPLATES[cpState.grade];
+
+  if(!gradesToday || !gradesToday.includes(cpState.grade) || !template){
+    shortenedPanel.innerHTML = "";
+    return;
+  }
+
+  const todayName = now.toLocaleDateString("en-US", { weekday: "long" });
+  const todaysPeriods = (data.schedule[todayName] || []).filter(p => p.kind !== "break");
+  let periodIndex = 0;
+
+  const rows = template.map(slot=>{
+    if(slot.type === "break"){
+      return `<tr class="break-row"><td class="time-col">${slot.time}</td><td>Break</td></tr>`;
+    }
+    const p = todaysPeriods[periodIndex++];
+    if(!p) return "";
+    return `<tr><td class="time-col">${slot.time}</td><td class="class-cell"><span class="subject" style="color:${subjectColor(p.subject)}">${subjectHtml(cpState.grade, cpState.section, p.subject)}</span><span class="teacher">${teacherLinks(p.teacher)}</span></td></tr>`;
+  }).join("");
+
+  shortenedPanel.innerHTML = `
+    <div class="shortened-banner">
+      <span class="shortened-badge">SHORTENED PERIOD</span>
+      Today (${todayName}, ${now.toLocaleDateString("en-US",{month:"long",day:"numeric"})}) uses the shortened schedule below.
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>TIME</th><th>${cpState.section.toUpperCase()}</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderSection(){
   const data = CLASS_PROGRAM.sections[cpState.grade][cpState.section];
   renderSectionInfo(data);
+  buildShortenedPanel(data);
 
   const days = CLASS_PROGRAM.meta.days;
   const rows = buildRows(data);

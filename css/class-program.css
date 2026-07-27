@@ -17,6 +17,7 @@
   --muted:#5f6b85;
   --cyan:#00E5FF;
   --live:#39FF14;
+  --warn:#FFB020;
 }
 :root[data-theme="light"]{
   --bg:#F4F6FB;
@@ -27,6 +28,7 @@
   --muted:#6B7590;
   --cyan:#0284C7;
   --live:#16A34A;
+  --warn:#B45309;
 }
 *{box-sizing:border-box;}
 body{
@@ -180,6 +182,35 @@ body{
   text-transform:uppercase;
   letter-spacing:.8px;
 }
+
+/* Shown by buildShortenedPanel() in class-program.js only when today's
+   real date is listed in SHORTENED_DATES (js/shortened-schedule.js) for
+   the grade being viewed — empty/hidden otherwise. */
+#shortenedPanel:empty{ display:none; }
+.shortened-banner{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(255,176,32,.1);
+  border:1px solid var(--warn);
+  border-radius:8px;
+  padding:10px 14px;
+  margin-bottom:10px;
+  font-size:12.5px;
+  color:var(--ink);
+}
+.shortened-badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:#1a1200;
+  background:var(--warn);
+  padding:3px 9px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+#shortenedPanel .table-wrap{ margin-bottom:18px; }
 
 .table-wrap{
   overflow-x:auto;
