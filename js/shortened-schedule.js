@@ -21,8 +21,9 @@ const SHORTENED_DATES = {
 // fewer than 9 subject-periods (Fridays commonly run 8, not 9); the
 // trailing "period" slot(s) simply go unused for those days rather than
 // assuming every day fills all 9.
-// G8/G10 aren't populated yet — a shortened date listed for either grade
-// simply won't render a panel until their templates are added here.
+// G8 isn't populated yet — a shortened date listed for it simply won't
+// render a panel until its template is added here. G10 shares G9's
+// template exactly (same times for both grades, per source).
 const SHORTENED_PERIOD_TEMPLATES = {
   G7: [
     { type: "period", time: "7:15 - 7:40" },
@@ -40,8 +41,8 @@ const SHORTENED_PERIOD_TEMPLATES = {
     { type: "period", time: "7:15 - 7:40" },
     { type: "period", time: "7:40 - 8:05" },
     { type: "period", time: "8:05 - 8:30" },
-    { type: "period", time: "8:30 - 9:05" },
-    { type: "break",  time: "9:05 - 9:25" },
+    { type: "period", time: "8:30 - 8:55" },
+    { type: "break",  time: "8:55 - 9:25" },
     { type: "period", time: "9:25 - 9:50" },
     { type: "period", time: "9:50 - 10:15" },
     { type: "period", time: "10:15 - 10:40" },
@@ -49,5 +50,5 @@ const SHORTENED_PERIOD_TEMPLATES = {
     { type: "period", time: "11:05 - 11:30" },
   ],
   G8: null,
-  G10: null,
 };
+SHORTENED_PERIOD_TEMPLATES.G10 = SHORTENED_PERIOD_TEMPLATES.G9;
