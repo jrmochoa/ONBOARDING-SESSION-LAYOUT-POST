@@ -49,7 +49,7 @@ const SCHEDULE = {
     ["10:25 - 11:05","Tuesday","G9","Honesty (CLVE)",4],
     ["1:25 - 2:05","Tuesday","G9","Integrity (Science)",4],
     ["2:05 - 2:45","Tuesday","G9","Modesty (AP)",4],
-    ["1:15 - 2:00","Wednesday","G7","Love (MAPEH)",5],
+    ["1:15 - 2:00","Thursday","G7","Love (MAPEH)",5],
     ["8:35 - 9:15","Thursday","G9","Loyalty (English)",5],
     ["7:15 - 7:55","Thursday","G9","Creativity (TLE)",5],
     ["8:00 - 8:45","Wednesday","G7","Faith (Math)",4],
