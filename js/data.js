@@ -49,16 +49,17 @@ const SCHEDULE = {
     ["10:25 - 11:05","Tuesday","G9","Honesty (CLVE)",4],
     ["1:25 - 2:05","Tuesday","G9","Integrity (Science)",4],
     ["2:05 - 2:45","Tuesday","G9","Modesty (AP)",4],
-    ["1:15 - 2:00","Thursday","G7","Love (MAPEH)",5],
     ["8:35 - 9:15","Thursday","G9","Loyalty (English)",5],
     ["7:15 - 7:55","Thursday","G9","Creativity (TLE)",5],
     ["8:00 - 8:45","Wednesday","G7","Faith (Math)",4],
+    ["1:15 - 2:00","Wednesday","G7","Love (MAPEH)","CANCELLED"],
     ["9:45 - 10:25","Wednesday","G9","Modesty (TLE)",5],
     ["1:25 - 2:05","Thursday","G9","Honesty (Math)",5],
     ["12:30 - 1:15","Friday","G7","Faith (CLVE)",5],
     ["10:45 - 11:30","Friday","G7","Hope (CLVE)",5],
     ["7:15 - 8:00","Tuesday","G7","Love (AP)",4],
-    ["8:35 - 9:15","Friday","G9","Integrity (Math)",5]
+    ["8:35 - 9:15","Friday","G9","Integrity (Math)",5],
+    ["1:15 - 2:00","Friday","G7","Love (MAPEH)",5]
   ]
 };
 const DAYS = ["Tuesday","Wednesday","Thursday","Friday"];
