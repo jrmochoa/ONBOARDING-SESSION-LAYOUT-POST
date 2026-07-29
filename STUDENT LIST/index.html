@@ -99,7 +99,7 @@
       <h1>Student Enrollment Breakdown</h1>
       <button id="themeToggle" class="theme-toggle"></button>
     </div>
-    <p class="sub">School Year 2026–2027 · St. Bridget College, Inc., Basic Education Department (Junior High Level) — counts read directly from each grade's official <code>REPORT ON ENROLLMENT</code> PDF in this folder.</p>
+    <p class="sub">School Year 2026–2027 · St. Bridget College, Inc., Basic Education Department (Elementary &amp; Junior High Levels) — counts read directly from each grade's official <code>REPORT ON ENROLLMENT</code> PDF in this folder. Grade 5 is omitted — no PDF for it exists in this folder.</p>
   </div>
 
   <div id="grandTotal" class="grand-total"></div>
@@ -115,11 +115,46 @@
 <script>
 /* ================= STUDENT DATA =================
    Read directly from the 4 REPORT ON ENROLLMENT PDFs in this folder
-   (GRADE 7 (1).pdf, GRADE 8.pdf, GRADE 9.pdf, GRADE 10.pdf) — male/
+   (GRADE 1.pdf through GRADE 10.pdf, one file per grade) — male/
    female counts are each PDF page's own stated "Total Male"/"Total
    Female" header, not a manual recount of listed names. Update this
-   object (and re-open this page) if enrollment changes. */
+   object (and re-open this page) if enrollment changes.
+
+   No GRADE 5 PDF exists in this folder — Grade 5 is omitted rather than
+   guessed. Add a G5 entry here (in numeric order, before G6) if that
+   file is ever provided. */
 const STUDENT_DATA = {
+  G1: {
+    "St. Agnes": { male: 14, female: 15 },
+    "St. Cecilia": { male: 16, female: 13 },
+    "St. Jacinta": { male: 14, female: 16 },
+    "St. Lucy": { male: 15, female: 14 },
+    "St. Maria Goretti": { male: 15, female: 15 },
+  },
+  G2: {
+    "St. Anthony": { male: 16, female: 19 },
+    "St. Joseph": { male: 19, female: 11 },
+    "St. Lorenzo Ruiz": { male: 18, female: 15 },
+    "St. Pedro Calungsod": { male: 16, female: 14 },
+  },
+  G3: {
+    "Blessed Imelda Lambertini": { male: 11, female: 20 },
+    "St. Carlo Acutis": { male: 12, female: 18 },
+    "St. Gemma Galgani": { male: 13, female: 16 },
+    "St. Tarcisius": { male: 13, female: 19 },
+  },
+  G4: {
+    "Our Lady of Barangay": { male: 9, female: 24 },
+    "Our Lady of Caysasay": { male: 13, female: 18 },
+    "Our Lady of Peñafrancia": { male: 19, female: 19 },
+    "Our Lady of Perpetual Help": { male: 17, female: 20 },
+  },
+  G6: {
+    "Blessed Maria Droste": { male: 19, female: 13 },
+    "St. Brigid of Ireland": { male: 15, female: 20 },
+    "St. John Eudes": { male: 17, female: 19 },
+    "St. Mary Euphrasia": { male: 17, female: 16 },
+  },
   G7: {
     Charity: { male: 15, female: 19 },
     Faith: { male: 16, female: 15 },
