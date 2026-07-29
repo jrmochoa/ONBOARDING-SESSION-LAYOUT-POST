@@ -99,7 +99,7 @@
       <h1>Student Enrollment Breakdown</h1>
       <button id="themeToggle" class="theme-toggle"></button>
     </div>
-    <p class="sub">School Year 2026–2027 · St. Bridget College, Inc., Basic Education Department (Elementary &amp; Junior High Levels) — counts read directly from each grade's official <code>REPORT ON ENROLLMENT</code> PDF in this folder. Grade 5 is omitted — no PDF for it exists in this folder.</p>
+    <p class="sub">School Year 2026–2027 · St. Bridget College, Inc., Basic Education Department (Preschool, Elementary &amp; Junior High Levels) — counts read directly from each level's official <code>REPORT ON ENROLLMENT</code> PDF in this folder.</p>
   </div>
 
   <div id="grandTotal" class="grand-total"></div>
@@ -114,16 +114,29 @@
 
 <script>
 /* ================= STUDENT DATA =================
-   Read directly from the 4 REPORT ON ENROLLMENT PDFs in this folder
-   (GRADE 1.pdf through GRADE 10.pdf, one file per grade) — male/
-   female counts are each PDF page's own stated "Total Male"/"Total
-   Female" header, not a manual recount of listed names. Update this
-   object (and re-open this page) if enrollment changes.
-
-   No GRADE 5 PDF exists in this folder — Grade 5 is omitted rather than
-   guessed. Add a G5 entry here (in numeric order, before G6) if that
-   file is ever provided. */
+   Read directly from the REPORT ON ENROLLMENT PDFs in this folder
+   (Nursery.pdf, PRE-K.pdf, KINDER.pdf, GRADE 1.pdf through GRADE 10.pdf)
+   — male/female counts are each PDF page's own stated "Total Male"/
+   "Total Female" header, not a manual recount of listed names. Update
+   this object (and re-open this page) if enrollment changes. Object key
+   order = display order (Nursery -> Pre-K -> Kinder -> Grade 1-10), see
+   gradeLabel()/gradeShort() below for how the non-numeric preschool
+   levels are labeled. */
 const STUDENT_DATA = {
+  NURSERY: {
+    "St. Anne (AM)": { male: 6, female: 6 },
+    "St. Joachim (PM)": { male: 5, female: 6 },
+  },
+  PREK: {
+    "St. Raphael (AM)": { male: 12, female: 13 },
+    "St. Uriel (PM)": { male: 10, female: 9 },
+  },
+  KINDER: {
+    "St. Aloysius Gonzaga (PM)": { male: 7, female: 7 },
+    "St. Dominic Savio (AM)": { male: 12, female: 11 },
+    "St. Philomena (AM)": { male: 10, female: 11 },
+    "St. Therese (PM)": { male: 9, female: 7 },
+  },
   G1: {
     "St. Agnes": { male: 14, female: 15 },
     "St. Cecilia": { male: 16, female: 13 },
@@ -148,6 +161,12 @@ const STUDENT_DATA = {
     "Our Lady of Caysasay": { male: 13, female: 18 },
     "Our Lady of Peñafrancia": { male: 19, female: 19 },
     "Our Lady of Perpetual Help": { male: 17, female: 20 },
+  },
+  G5: {
+    "St. John": { male: 10, female: 23 },
+    "St. Luke": { male: 15, female: 16 },
+    "St. Mark": { male: 16, female: 15 },
+    "St. Matthew": { male: 19, female: 13 },
   },
   G6: {
     "Blessed Maria Droste": { male: 19, female: 13 },
@@ -191,8 +210,11 @@ const STUDENT_DATA = {
   },
 };
 
-function gradeNumber(g){ return g.replace("G", ""); }
-function gradeLabel(g){ return "Grade " + gradeNumber(g); }
+const PRESCHOOL_LABELS = { NURSERY: "Nursery", PREK: "Pre-Kindergarten", KINDER: "Kindergarten" };
+// Short form used in section-card titles (e.g. "7 - CHARITY" for grades,
+// but the full word for preschool levels since they have no number).
+function gradeShort(g){ return PRESCHOOL_LABELS[g] || g.replace("G", ""); }
+function gradeLabel(g){ return PRESCHOOL_LABELS[g] || "Grade " + g.replace("G", ""); }
 
 function gradeTotals(grade){
   return Object.values(STUDENT_DATA[grade]).reduce((acc, s) => {
@@ -248,7 +270,7 @@ function renderSections(){
       const fPct = (100 - mPct).toFixed(1);
       return `
         <div class="section-card">
-          <h4>${gradeNumber(grade)} - ${section.toUpperCase()}</h4>
+          <h4>${gradeShort(grade)} - ${section.toUpperCase()}</h4>
           <div class="counts">
             <div class="c male">Male<b>${s.male}</b></div>
             <div class="c female">Female<b>${s.female}</b></div>
