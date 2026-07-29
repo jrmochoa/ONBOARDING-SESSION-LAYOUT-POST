@@ -1,0 +1,4 @@
+# Raw student enrollment PDFs contain real students' full legal names —
+# never publish these to the public repo/GitHub Pages. STUDENT LIST/index.html
+# (aggregate counts only, no individual names) stays tracked and public.
+STUDENT LIST/*.pdf
