@@ -157,11 +157,34 @@ body{
   margin:0;
   color:var(--ink);
 }
+.section-card .card-head-right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 .section-card .card-head .completeness{
   font-size:10.5px;
   color:var(--muted);
   letter-spacing:.3px;
 }
+.dl-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
+  padding:0;
+  font-size:13px;
+  line-height:1;
+  color:var(--muted);
+  background:var(--panel-alt);
+  border:1px solid var(--line);
+  border-radius:5px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.dl-btn:hover:not(:disabled){color:var(--cyan);border-color:var(--cyan);}
+.dl-btn:disabled{cursor:default;opacity:.6;}
 .section-card table{
   width:100%;
   border-collapse:collapse;

@@ -82,10 +82,13 @@ function sectionCard(grade, section, sessions){
   `).join("");
 
   return `
-    <div class="section-card">
+    <div class="section-card" data-grade="${grade}" data-section="${section.replace(/"/g,"&quot;")}">
       <div class="card-head">
         <h2>${gradeLabel(grade)} — ${section}</h2>
-        <span class="completeness">${doneCount}/5 held</span>
+        <div class="card-head-right">
+          <span class="completeness">${doneCount}/5 held</span>
+          <button class="dl-btn" type="button" title="Download this table as an image">&#8681;</button>
+        </div>
       </div>
       <table>
         <thead><tr><th>#</th><th>Date</th><th>Time</th><th>Subject</th><th>Status</th></tr></thead>
@@ -93,6 +96,41 @@ function sectionCard(grade, section, sessions){
       </table>
     </div>
   `;
+}
+
+// Rasterizes one .section-card into a PNG and downloads it. .section-card
+// carries no CSS transform (unlike index.html's scaled preview), so
+// html2canvas can capture it directly with no hidden-node workaround.
+// ignoreElements skips the download button itself so it doesn't appear
+// in the exported image.
+async function downloadSectionCard(cardEl, btnEl){
+  if(typeof html2canvas === "undefined"){
+    alert("Image export isn't available right now (html2canvas failed to load).");
+    return;
+  }
+  const original = btnEl.innerHTML;
+  btnEl.disabled = true;
+  btnEl.innerHTML = "&hellip;";
+  try{
+    await document.fonts.ready;
+    const canvas = await html2canvas(cardEl, {
+      scale: 2,
+      backgroundColor: getComputedStyle(cardEl).backgroundColor,
+      ignoreElements: el => el.classList && el.classList.contains("dl-btn"),
+    });
+    const grade = cardEl.dataset.grade;
+    const section = cardEl.dataset.section.replace(/[^a-z0-9]+/gi, "-").toLowerCase().replace(/^-+|-+$/g, "");
+    const link = document.createElement("a");
+    link.download = `${grade.toLowerCase()}-${section}-sessions.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }catch(err){
+    console.error("Session breakdown export failed:", err);
+    alert("Couldn't generate the image. Please try again.");
+  }finally{
+    btnEl.disabled = false;
+    btnEl.innerHTML = original;
+  }
 }
 
 function renderSections(){
@@ -124,6 +162,15 @@ function buildGradeTabs(){
     gradeSeg.appendChild(b);
   });
 }
+
+// Delegated listener: sectionsEl's innerHTML is replaced wholesale on every
+// renderSections() call, so this is bound once to the persistent container
+// rather than re-attached to each .dl-btn after every render.
+sectionsEl.addEventListener("click", (e)=>{
+  const btn = e.target.closest(".dl-btn");
+  if(!btn) return;
+  downloadSectionCard(btn.closest(".section-card"), btn);
+});
 
 /* ================= INITIAL CALLS ================= */
 buildGradeTabs();
