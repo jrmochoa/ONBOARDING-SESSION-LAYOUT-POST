@@ -69,28 +69,17 @@ function statusPill(session){
   return `<span class="status-pill upcoming">UPCOMING</span>`;
 }
 
-// Renders sessions as a git-log-style commit graph rather than a plain
-// table: a numbered node per session on a connecting rail, styled by
-// session-breakdown.css to run solid green through completed sessions and
-// dash off into the ones still ahead — the line itself carries the "how
-// far through these 5 are we" information the old table left to the
-// separate DONE/UPCOMING pill alone.
 function sectionCard(grade, section, sessions){
   const doneCount = sessions.filter(s=>s.status==="done"||s.status==="online").length;
-  const rows = sessions.map(s=>{
-    const cls = s.status === "online" ? "log-online" : s.status === "done" ? "log-done" : "log-upcoming";
-    return `
-    <li class="log-row ${cls}">
-      <div class="rail"><span class="session-num-badge">${s.sessionNum}</span></div>
-      <div class="row-body">
-        <div class="row-top">
-          <span class="subject-chip">${s.subject}</span>
-          ${statusPill(s)}
-        </div>
-        <div class="row-meta">${s.date}${s.week ? ` &middot; ${s.day}` : ""} &nbsp;&middot;&nbsp; ${s.time}</div>
-      </div>
-    </li>`;
-  }).join("");
+  const rows = sessions.map(s=>`
+    <tr class="${s.status==='online' ? 'online' : ''}${s.status==='done' ? ' status-done' : ''}">
+      <td><span class="session-num-badge">${s.sessionNum}</span></td>
+      <td class="day-cell">${s.date}${s.week ? ` &middot; ${s.day}` : ""}</td>
+      <td class="day-cell">${s.time}</td>
+      <td><span class="subject-chip">${s.subject}</span></td>
+      <td>${statusPill(s)}</td>
+    </tr>
+  `).join("");
 
   return `
     <div class="section-card" data-grade="${grade}" data-section="${section.replace(/"/g,"&quot;")}">
@@ -98,10 +87,13 @@ function sectionCard(grade, section, sessions){
         <h2>${gradeLabel(grade)} — ${section}</h2>
         <div class="card-head-right">
           <span class="completeness">${doneCount}/5 held</span>
-          <button class="dl-btn" type="button" title="Download this section as an image">&#8681;</button>
+          <button class="dl-btn" type="button" title="Download this table as an image">&#8681;</button>
         </div>
       </div>
-      <ul class="session-log">${rows}</ul>
+      <table>
+        <thead><tr><th>#</th><th>Date</th><th>Time</th><th>Subject</th><th>Status</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
     </div>
   `;
 }
